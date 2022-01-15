@@ -1,0 +1,90 @@
+body, html {
+	height: 100%;
+}
+.bg {
+	/* The image used */
+	background-image: url("https://images.unsplash.com/photo-1550645612-83f5d594b671?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80");
+	/*https://live.staticflickr.com/5204/5321533361_4d8099bd99_b.jpg*/
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.number{
+	color: gold;
+}
+.navbar-brand{
+	color: gold;
+}
+.coloristicbutton{
+	color: gold;
+}
+
+.introtext{
+	color: gold;
+}
+
+.navbar{
+	background-image: url("https://www.thecoderschool.com/wp-content/uploads/2019/01/Modern-Computer-programming-Code-942607124_2122x1416-750x321.jpeg");
+	background-repeat: round;
+}
+
+.overlay{
+	position: center;
+	min-height: 100%;
+	min-width: 100%;
+	left: 0;
+	top: 0;
+}
+
+.startpage{
+	position: absolute;
+	top: 30%;
+	margin: auto;
+	padding: 2em;
+}
+.startpage h1{
+	color: gold;
+}
+.startpage p{
+	color: gold;
+	font-size: 20px;
+	width: 70%;
+	line-height: 1.5;
+}
+
+.main-footer{
+	background-color: midnightblue;
+	border-radius: 0 0 10px 10px;
+	border-top: 1px solid black;
+}
+
+img{
+	max-width: 100%;
+	max-height: 100%;
+}
+
+h1{
+	font-size:50px;
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+h2{
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+p {
+	font-size: 18px;
+}
+
+.avatar{
+	width: 256px;
+	height: 256px;
+	border-radius: 10%;
+	display: compact;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+}
