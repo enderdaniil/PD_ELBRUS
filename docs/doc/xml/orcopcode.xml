@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="orc-OrcOpcode">
+<refmeta>
+<refentrytitle role="top_of_page" id="orc-OrcOpcode.top_of_page">OrcOpcode</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ORC Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>OrcOpcode</refname>
+<refpurpose>Operations</refpurpose>
+</refnamediv>
+
+<refsect1 id="orc-OrcOpcode.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="OrcOpcodeEmulateFunc">*OrcOpcodeEmulateFunc</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="orc-OrcOpcode.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="OrcOpcodeExecutor">OrcOpcodeExecutor</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="OrcOpcodeSet">OrcOpcodeSet</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="OrcRuleSet">OrcRuleSet</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="OrcStaticOpcode">OrcStaticOpcode</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="OrcTarget">OrcTarget</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ORC-OPCODE-N-ARGS:CAPS">ORC_OPCODE_N_ARGS</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ORC-STATIC-OPCODE-ACCUMULATOR:CAPS">ORC_STATIC_OPCODE_ACCUMULATOR</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ORC-STATIC-OPCODE-N-DEST:CAPS">ORC_STATIC_OPCODE_N_DEST</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ORC-STATIC-OPCODE-N-SRC:CAPS">ORC_STATIC_OPCODE_N_SRC</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="orc-OrcOpcode.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="orc-OrcOpcode.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="OrcOpcodeEmulateFunc" role="function">
+<title>OrcOpcodeEmulateFunc&#160;()</title>
+<indexterm zone="OrcOpcodeEmulateFunc"><primary>OrcOpcodeEmulateFunc</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*OrcOpcodeEmulateFunc<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="OrcOpcodeExecutor"><type>OrcOpcodeExecutor</type></link> *ex</parameter>,
+                         <parameter><link linkend="void"><type>void</type></link> *user</parameter>);</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="orc-OrcOpcode.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="OrcOpcodeExecutor" role="struct">
+<title>struct OrcOpcodeExecutor</title>
+<indexterm zone="OrcOpcodeExecutor"><primary>OrcOpcodeExecutor</primary></indexterm>
+<programlisting language="C">struct OrcOpcodeExecutor {
+};
+</programlisting>
+<para>The OrcOpcodeExecutor structure has no public members</para>
+</refsect2>
+<refsect2 id="OrcOpcodeSet" role="struct">
+<title>struct OrcOpcodeSet</title>
+<indexterm zone="OrcOpcodeSet"><primary>OrcOpcodeSet</primary></indexterm>
+<programlisting language="C">struct OrcOpcodeSet {
+};
+</programlisting>
+<para>The OrcOpcodeSet structure has no public members</para>
+</refsect2>
+<refsect2 id="OrcRuleSet" role="struct">
+<title>struct OrcRuleSet</title>
+<indexterm zone="OrcRuleSet"><primary>OrcRuleSet</primary></indexterm>
+<programlisting language="C">struct OrcRuleSet {
+};
+</programlisting>
+<para>The OrcRuleSet structure has no public members</para>
+</refsect2>
+<refsect2 id="OrcStaticOpcode" role="struct">
+<title>struct OrcStaticOpcode</title>
+<indexterm zone="OrcStaticOpcode"><primary>OrcStaticOpcode</primary></indexterm>
+<programlisting language="C">struct OrcStaticOpcode {
+  char name[16];
+  unsigned int flags;
+  int dest_size[ORC_STATIC_OPCODE_N_DEST];
+  int src_size[ORC_STATIC_OPCODE_N_SRC];
+  OrcOpcodeEmulateNFunc emulateN;
+};
+</programlisting>
+</refsect2>
+<refsect2 id="OrcTarget" role="struct">
+<title>struct OrcTarget</title>
+<indexterm zone="OrcTarget"><primary>OrcTarget</primary></indexterm>
+<programlisting language="C">struct OrcTarget {
+  const char *name;
+  orc_bool executable;
+  int data_register_offset;
+
+  unsigned int (*get_default_flags)(void);
+  void (*compiler_init)(OrcCompiler *compiler);
+  void (*compile)(OrcCompiler *compiler);
+
+  OrcRuleSet rule_sets[ORC_N_RULE_SETS];
+  int n_rule_sets;
+
+  const char * (*get_asm_preamble)(void);
+  void (*load_constant)(OrcCompiler *compiler, int reg, int size, int value);
+  const char * (*get_flag_name)(int shift);
+  void (*flush_cache) (OrcCode *code);
+  void (*load_constant_long)(OrcCompiler *compiler, int reg,
+      OrcConstant *constant);
+
+  void *_unused[5];
+};
+</programlisting>
+</refsect2>
+<refsect2 id="ORC-OPCODE-N-ARGS:CAPS" role="macro">
+<title>ORC_OPCODE_N_ARGS</title>
+<indexterm zone="ORC-OPCODE-N-ARGS:CAPS"><primary>ORC_OPCODE_N_ARGS</primary></indexterm>
+<programlisting language="C">#define ORC_OPCODE_N_ARGS 4
+</programlisting>
+</refsect2>
+<refsect2 id="ORC-STATIC-OPCODE-ACCUMULATOR:CAPS" role="macro">
+<title>ORC_STATIC_OPCODE_ACCUMULATOR</title>
+<indexterm zone="ORC-STATIC-OPCODE-ACCUMULATOR:CAPS"><primary>ORC_STATIC_OPCODE_ACCUMULATOR</primary></indexterm>
+<programlisting language="C">#define ORC_STATIC_OPCODE_ACCUMULATOR (1&lt;&lt;0)
+</programlisting>
+</refsect2>
+<refsect2 id="ORC-STATIC-OPCODE-N-DEST:CAPS" role="macro">
+<title>ORC_STATIC_OPCODE_N_DEST</title>
+<indexterm zone="ORC-STATIC-OPCODE-N-DEST:CAPS"><primary>ORC_STATIC_OPCODE_N_DEST</primary></indexterm>
+<programlisting language="C">#define ORC_STATIC_OPCODE_N_DEST 2
+</programlisting>
+</refsect2>
+<refsect2 id="ORC-STATIC-OPCODE-N-SRC:CAPS" role="macro">
+<title>ORC_STATIC_OPCODE_N_SRC</title>
+<indexterm zone="ORC-STATIC-OPCODE-N-SRC:CAPS"><primary>ORC_STATIC_OPCODE_N_SRC</primary></indexterm>
+<programlisting language="C">#define ORC_STATIC_OPCODE_N_SRC 4
+</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

@@ -1,0 +1,220 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="orc-x86">
+<refmeta>
+<refentrytitle role="top_of_page" id="orc-x86.top_of_page">x86</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ORC Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>x86</refname>
+<refpurpose>code generation for x86</refpurpose>
+</refnamediv>
+
+<refsect1 id="orc-x86.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="orc-x86-emit-add-imm-memoffset">orc_x86_emit_add_imm_memoffset</link><phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="orc-x86-emit-add-reg-memoffset">orc_x86_emit_add_reg_memoffset</link><phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="orc-x86-emit-align">orc_x86_emit_align</link><phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="orc-x86-emit-and-imm-memoffset">orc_x86_emit_and_imm_memoffset</link><phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="orc-x86-emit-and-imm-reg">orc_x86_emit_and_imm_reg</link><phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="orc-x86-emit-cmp-reg-memoffset">orc_x86_emit_cmp_reg_memoffset</link><phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="orc-x86-emit-emms">orc_x86_emit_emms</link><phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="orc-x86-emit-je">orc_x86_emit_je</link><phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="orc-x86-emit-jle">orc_x86_emit_jle</link><phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="orc-x86-emit-jmp">orc_x86_emit_jmp</link><phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="orc-x86-emit-jne">orc_x86_emit_jne</link><phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="orc-x86-emit-label">orc_x86_emit_label</link><phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="orc-x86-emit-mov-imm-reg">orc_x86_emit_mov_imm_reg</link><phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="orc-x86-emit-mov-memoffset-mmx">orc_x86_emit_mov_memoffset_mmx</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="orc-x86-emit-mov-mmx-memoffset">orc_x86_emit_mov_mmx_memoffset</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="orc-x86-emit-mov-mmx-reg">orc_x86_emit_mov_mmx_reg</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="orc-x86-emit-mov-mmx-reg-reg">orc_x86_emit_mov_mmx_reg_reg</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="orc-x86-emit-mov-reg-mmx">orc_x86_emit_mov_reg_mmx</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="orc-x86-emit-mov-reg-reg">orc_x86_emit_mov_reg_reg</link><phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="orc-x86-emit-ret">orc_x86_emit_ret</link><phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="orc-x86-emit-sar-imm-reg">orc_x86_emit_sar_imm_reg</link><phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="orc-x86-emit-sub-memoffset-reg">orc_x86_emit_sub_memoffset_reg</link><phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="orc-x86-emit-sub-reg-reg">orc_x86_emit_sub_reg_reg</link><phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="orc-x86-emit-test-reg-reg">orc_x86_emit_test_reg_reg</link><phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="orc-x86-get-regname-mmx">orc_x86_get_regname_mmx</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="orc-x86.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="orc-x86.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="orc-x86-emit-add-imm-memoffset" role="macro">
+<title>orc_x86_emit_add_imm_memoffset()</title>
+<indexterm zone="orc-x86-emit-add-imm-memoffset"><primary>orc_x86_emit_add_imm_memoffset</primary></indexterm>
+<programlisting language="C">#define             orc_x86_emit_add_imm_memoffset(p,size,value,offset,reg)</programlisting>
+</refsect2>
+<refsect2 id="orc-x86-emit-add-reg-memoffset" role="macro">
+<title>orc_x86_emit_add_reg_memoffset()</title>
+<indexterm zone="orc-x86-emit-add-reg-memoffset"><primary>orc_x86_emit_add_reg_memoffset</primary></indexterm>
+<programlisting language="C">#define             orc_x86_emit_add_reg_memoffset(p,size,src,offset,dest)</programlisting>
+</refsect2>
+<refsect2 id="orc-x86-emit-align" role="macro">
+<title>orc_x86_emit_align()</title>
+<indexterm zone="orc-x86-emit-align"><primary>orc_x86_emit_align</primary></indexterm>
+<programlisting language="C">#define             orc_x86_emit_align(p,align_shift)</programlisting>
+</refsect2>
+<refsect2 id="orc-x86-emit-and-imm-memoffset" role="macro">
+<title>orc_x86_emit_and_imm_memoffset()</title>
+<indexterm zone="orc-x86-emit-and-imm-memoffset"><primary>orc_x86_emit_and_imm_memoffset</primary></indexterm>
+<programlisting language="C">#define             orc_x86_emit_and_imm_memoffset(p,size,value,offset,reg)</programlisting>
+</refsect2>
+<refsect2 id="orc-x86-emit-and-imm-reg" role="macro">
+<title>orc_x86_emit_and_imm_reg()</title>
+<indexterm zone="orc-x86-emit-and-imm-reg"><primary>orc_x86_emit_and_imm_reg</primary></indexterm>
+<programlisting language="C">#define             orc_x86_emit_and_imm_reg(p,size,value,reg)</programlisting>
+</refsect2>
+<refsect2 id="orc-x86-emit-cmp-reg-memoffset" role="macro">
+<title>orc_x86_emit_cmp_reg_memoffset()</title>
+<indexterm zone="orc-x86-emit-cmp-reg-memoffset"><primary>orc_x86_emit_cmp_reg_memoffset</primary></indexterm>
+<programlisting language="C">#define             orc_x86_emit_cmp_reg_memoffset(p,size,src,offset,dest)</programlisting>
+</refsect2>
+<refsect2 id="orc-x86-emit-emms" role="macro">
+<title>orc_x86_emit_emms()</title>
+<indexterm zone="orc-x86-emit-emms"><primary>orc_x86_emit_emms</primary></indexterm>
+<programlisting language="C">#define             orc_x86_emit_emms(p)</programlisting>
+</refsect2>
+<refsect2 id="orc-x86-emit-je" role="macro">
+<title>orc_x86_emit_je()</title>
+<indexterm zone="orc-x86-emit-je"><primary>orc_x86_emit_je</primary></indexterm>
+<programlisting language="C">#define             orc_x86_emit_je(p,label)</programlisting>
+</refsect2>
+<refsect2 id="orc-x86-emit-jle" role="macro">
+<title>orc_x86_emit_jle()</title>
+<indexterm zone="orc-x86-emit-jle"><primary>orc_x86_emit_jle</primary></indexterm>
+<programlisting language="C">#define             orc_x86_emit_jle(p,label)</programlisting>
+</refsect2>
+<refsect2 id="orc-x86-emit-jmp" role="macro">
+<title>orc_x86_emit_jmp()</title>
+<indexterm zone="orc-x86-emit-jmp"><primary>orc_x86_emit_jmp</primary></indexterm>
+<programlisting language="C">#define             orc_x86_emit_jmp(p,label)</programlisting>
+</refsect2>
+<refsect2 id="orc-x86-emit-jne" role="macro">
+<title>orc_x86_emit_jne()</title>
+<indexterm zone="orc-x86-emit-jne"><primary>orc_x86_emit_jne</primary></indexterm>
+<programlisting language="C">#define             orc_x86_emit_jne(p,label)</programlisting>
+</refsect2>
+<refsect2 id="orc-x86-emit-label" role="macro">
+<title>orc_x86_emit_label()</title>
+<indexterm zone="orc-x86-emit-label"><primary>orc_x86_emit_label</primary></indexterm>
+<programlisting language="C">#define             orc_x86_emit_label(p,label)</programlisting>
+</refsect2>
+<refsect2 id="orc-x86-emit-mov-imm-reg" role="macro">
+<title>orc_x86_emit_mov_imm_reg()</title>
+<indexterm zone="orc-x86-emit-mov-imm-reg"><primary>orc_x86_emit_mov_imm_reg</primary></indexterm>
+<programlisting language="C">#define             orc_x86_emit_mov_imm_reg(p,size,value,reg)</programlisting>
+</refsect2>
+<refsect2 id="orc-x86-emit-mov-memoffset-mmx" role="function">
+<title>orc_x86_emit_mov_memoffset_mmx&#160;()</title>
+<indexterm zone="orc-x86-emit-mov-memoffset-mmx"><primary>orc_x86_emit_mov_memoffset_mmx</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+orc_x86_emit_mov_memoffset_mmx (<parameter><link linkend="OrcCompiler"><type>OrcCompiler</type></link> *compiler</parameter>,
+                                <parameter><link linkend="int"><type>int</type></link> size</parameter>,
+                                <parameter><link linkend="int"><type>int</type></link> offset</parameter>,
+                                <parameter><link linkend="int"><type>int</type></link> reg1</parameter>,
+                                <parameter><link linkend="int"><type>int</type></link> reg2</parameter>,
+                                <parameter><link linkend="int"><type>int</type></link> is_aligned</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="orc-x86-emit-mov-mmx-memoffset" role="function">
+<title>orc_x86_emit_mov_mmx_memoffset&#160;()</title>
+<indexterm zone="orc-x86-emit-mov-mmx-memoffset"><primary>orc_x86_emit_mov_mmx_memoffset</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+orc_x86_emit_mov_mmx_memoffset (<parameter><link linkend="OrcCompiler"><type>OrcCompiler</type></link> *compiler</parameter>,
+                                <parameter><link linkend="int"><type>int</type></link> size</parameter>,
+                                <parameter><link linkend="int"><type>int</type></link> reg1</parameter>,
+                                <parameter><link linkend="int"><type>int</type></link> offset</parameter>,
+                                <parameter><link linkend="int"><type>int</type></link> reg2</parameter>,
+                                <parameter><link linkend="int"><type>int</type></link> aligned</parameter>,
+                                <parameter><link linkend="int"><type>int</type></link> uncached</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="orc-x86-emit-mov-mmx-reg" role="function">
+<title>orc_x86_emit_mov_mmx_reg&#160;()</title>
+<indexterm zone="orc-x86-emit-mov-mmx-reg"><primary>orc_x86_emit_mov_mmx_reg</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+orc_x86_emit_mov_mmx_reg (<parameter><link linkend="OrcCompiler"><type>OrcCompiler</type></link> *compiler</parameter>,
+                          <parameter><link linkend="int"><type>int</type></link> reg1</parameter>,
+                          <parameter><link linkend="int"><type>int</type></link> reg2</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="orc-x86-emit-mov-mmx-reg-reg" role="function">
+<title>orc_x86_emit_mov_mmx_reg_reg&#160;()</title>
+<indexterm zone="orc-x86-emit-mov-mmx-reg-reg"><primary>orc_x86_emit_mov_mmx_reg_reg</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+orc_x86_emit_mov_mmx_reg_reg (<parameter><link linkend="OrcCompiler"><type>OrcCompiler</type></link> *compiler</parameter>,
+                              <parameter><link linkend="int"><type>int</type></link> reg1</parameter>,
+                              <parameter><link linkend="int"><type>int</type></link> reg2</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="orc-x86-emit-mov-reg-mmx" role="function">
+<title>orc_x86_emit_mov_reg_mmx&#160;()</title>
+<indexterm zone="orc-x86-emit-mov-reg-mmx"><primary>orc_x86_emit_mov_reg_mmx</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+orc_x86_emit_mov_reg_mmx (<parameter><link linkend="OrcCompiler"><type>OrcCompiler</type></link> *compiler</parameter>,
+                          <parameter><link linkend="int"><type>int</type></link> reg1</parameter>,
+                          <parameter><link linkend="int"><type>int</type></link> reg2</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="orc-x86-emit-mov-reg-reg" role="macro">
+<title>orc_x86_emit_mov_reg_reg()</title>
+<indexterm zone="orc-x86-emit-mov-reg-reg"><primary>orc_x86_emit_mov_reg_reg</primary></indexterm>
+<programlisting language="C">#define             orc_x86_emit_mov_reg_reg(p,size,src,dest)</programlisting>
+</refsect2>
+<refsect2 id="orc-x86-emit-ret" role="macro">
+<title>orc_x86_emit_ret()</title>
+<indexterm zone="orc-x86-emit-ret"><primary>orc_x86_emit_ret</primary></indexterm>
+<programlisting language="C">#define             orc_x86_emit_ret(p)</programlisting>
+</refsect2>
+<refsect2 id="orc-x86-emit-sar-imm-reg" role="macro">
+<title>orc_x86_emit_sar_imm_reg()</title>
+<indexterm zone="orc-x86-emit-sar-imm-reg"><primary>orc_x86_emit_sar_imm_reg</primary></indexterm>
+<programlisting language="C">#define             orc_x86_emit_sar_imm_reg(p,size,value,reg)</programlisting>
+</refsect2>
+<refsect2 id="orc-x86-emit-sub-memoffset-reg" role="macro">
+<title>orc_x86_emit_sub_memoffset_reg()</title>
+<indexterm zone="orc-x86-emit-sub-memoffset-reg"><primary>orc_x86_emit_sub_memoffset_reg</primary></indexterm>
+<programlisting language="C">#define             orc_x86_emit_sub_memoffset_reg(p,size,offset,src,dest)</programlisting>
+</refsect2>
+<refsect2 id="orc-x86-emit-sub-reg-reg" role="macro">
+<title>orc_x86_emit_sub_reg_reg()</title>
+<indexterm zone="orc-x86-emit-sub-reg-reg"><primary>orc_x86_emit_sub_reg_reg</primary></indexterm>
+<programlisting language="C">#define             orc_x86_emit_sub_reg_reg(p,size,src,dest)</programlisting>
+</refsect2>
+<refsect2 id="orc-x86-emit-test-reg-reg" role="macro">
+<title>orc_x86_emit_test_reg_reg()</title>
+<indexterm zone="orc-x86-emit-test-reg-reg"><primary>orc_x86_emit_test_reg_reg</primary></indexterm>
+<programlisting language="C">#define             orc_x86_emit_test_reg_reg(p,size,src,dest)</programlisting>
+</refsect2>
+<refsect2 id="orc-x86-get-regname-mmx" role="function">
+<title>orc_x86_get_regname_mmx&#160;()</title>
+<indexterm zone="orc-x86-get-regname-mmx"><primary>orc_x86_get_regname_mmx</primary></indexterm>
+<programlisting language="C">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+orc_x86_get_regname_mmx (<parameter><link linkend="int"><type>int</type></link> i</parameter>);</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

@@ -1,0 +1,215 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="orc-misc">
+<refmeta>
+<refentrytitle role="top_of_page" id="orc-misc.top_of_page">misc</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ORC Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>misc</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsect1 id="orc-misc.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="OrcRuleEmitFunc">*OrcRuleEmitFunc</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="orc-powerpc-init">orc_powerpc_init</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="orc-arm-init">orc_arm_init</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="orc-c-init">orc_c_init</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="orc-misc.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="OrcVariable">OrcVariable</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="OrcInstruction">OrcInstruction</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="OrcRule">OrcRule</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="OrcFixup">OrcFixup</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ORC-N-REGS:CAPS">ORC_N_REGS</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ORC-N-INSNS:CAPS">ORC_N_INSNS</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ORC-N-VARIABLES:CAPS">ORC_N_VARIABLES</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ORC-N-REGISTERS:CAPS">ORC_N_REGISTERS</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ORC-N-FIXUPS:CAPS">ORC_N_FIXUPS</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ORC-N-LABELS:CAPS">ORC_N_LABELS</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ORC-GP-REG-BASE:CAPS">ORC_GP_REG_BASE</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ORC-VEC-REG-BASE:CAPS">ORC_VEC_REG_BASE</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="OrcVarType">OrcVarType</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="orc-misc.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="orc-misc.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="OrcRuleEmitFunc" role="function">
+<title>OrcRuleEmitFunc&#160;()</title>
+<indexterm zone="OrcRuleEmitFunc"><primary>OrcRuleEmitFunc</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*OrcRuleEmitFunc<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="OrcCompiler"><type>OrcCompiler</type></link> *p</parameter>,
+                    <parameter><link linkend="void"><type>void</type></link> *user</parameter>,
+                    <parameter><link linkend="OrcInstruction"><type>OrcInstruction</type></link> *insn</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="orc-powerpc-init" role="function">
+<title>orc_powerpc_init&#160;()</title>
+<indexterm zone="orc-powerpc-init"><primary>orc_powerpc_init</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+orc_powerpc_init (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="orc-arm-init" role="function">
+<title>orc_arm_init&#160;()</title>
+<indexterm zone="orc-arm-init"><primary>orc_arm_init</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+orc_arm_init (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="orc-c-init" role="function">
+<title>orc_c_init&#160;()</title>
+<indexterm zone="orc-c-init"><primary>orc_c_init</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+orc_c_init (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="orc-misc.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="OrcVariable" role="struct">
+<title>struct OrcVariable</title>
+<indexterm zone="OrcVariable"><primary>OrcVariable</primary></indexterm>
+<programlisting language="C">struct OrcVariable {
+};
+</programlisting>
+<para>The OrcVariable structure has no public members</para>
+</refsect2>
+<refsect2 id="OrcInstruction" role="struct">
+<title>struct OrcInstruction</title>
+<indexterm zone="OrcInstruction"><primary>OrcInstruction</primary></indexterm>
+<programlisting language="C">struct OrcInstruction {
+};
+</programlisting>
+<para>The OrcInstruction structure has no public members</para>
+</refsect2>
+<refsect2 id="OrcRule" role="struct">
+<title>struct OrcRule</title>
+<indexterm zone="OrcRule"><primary>OrcRule</primary></indexterm>
+<programlisting language="C">struct OrcRule {
+};
+</programlisting>
+<para>The OrcRule structure has no public members</para>
+</refsect2>
+<refsect2 id="OrcFixup" role="struct">
+<title>struct OrcFixup</title>
+<indexterm zone="OrcFixup"><primary>OrcFixup</primary></indexterm>
+<programlisting language="C">struct OrcFixup {
+};
+</programlisting>
+<para>The OrcFixup structure has no public members</para>
+</refsect2>
+<refsect2 id="ORC-N-REGS:CAPS" role="macro">
+<title>ORC_N_REGS</title>
+<indexterm zone="ORC-N-REGS:CAPS"><primary>ORC_N_REGS</primary></indexterm>
+<programlisting language="C">#define ORC_N_REGS (32*4)
+</programlisting>
+</refsect2>
+<refsect2 id="ORC-N-INSNS:CAPS" role="macro">
+<title>ORC_N_INSNS</title>
+<indexterm zone="ORC-N-INSNS:CAPS"><primary>ORC_N_INSNS</primary></indexterm>
+<programlisting language="C">#define ORC_N_INSNS 100
+</programlisting>
+</refsect2>
+<refsect2 id="ORC-N-VARIABLES:CAPS" role="macro">
+<title>ORC_N_VARIABLES</title>
+<indexterm zone="ORC-N-VARIABLES:CAPS"><primary>ORC_N_VARIABLES</primary></indexterm>
+<programlisting language="C">#define ORC_N_VARIABLES 64
+</programlisting>
+</refsect2>
+<refsect2 id="ORC-N-REGISTERS:CAPS" role="macro">
+<title>ORC_N_REGISTERS</title>
+<indexterm zone="ORC-N-REGISTERS:CAPS"><primary>ORC_N_REGISTERS</primary></indexterm>
+<programlisting language="C">#define ORC_N_REGISTERS 20
+</programlisting>
+</refsect2>
+<refsect2 id="ORC-N-FIXUPS:CAPS" role="macro">
+<title>ORC_N_FIXUPS</title>
+<indexterm zone="ORC-N-FIXUPS:CAPS"><primary>ORC_N_FIXUPS</primary></indexterm>
+<programlisting language="C">#define ORC_N_FIXUPS 100
+</programlisting>
+</refsect2>
+<refsect2 id="ORC-N-LABELS:CAPS" role="macro">
+<title>ORC_N_LABELS</title>
+<indexterm zone="ORC-N-LABELS:CAPS"><primary>ORC_N_LABELS</primary></indexterm>
+<programlisting language="C">#define ORC_N_LABELS 40
+</programlisting>
+</refsect2>
+<refsect2 id="ORC-GP-REG-BASE:CAPS" role="macro">
+<title>ORC_GP_REG_BASE</title>
+<indexterm zone="ORC-GP-REG-BASE:CAPS"><primary>ORC_GP_REG_BASE</primary></indexterm>
+<programlisting language="C">#define ORC_GP_REG_BASE 32
+</programlisting>
+</refsect2>
+<refsect2 id="ORC-VEC-REG-BASE:CAPS" role="macro">
+<title>ORC_VEC_REG_BASE</title>
+<indexterm zone="ORC-VEC-REG-BASE:CAPS"><primary>ORC_VEC_REG_BASE</primary></indexterm>
+<programlisting language="C">#define ORC_VEC_REG_BASE 64
+</programlisting>
+</refsect2>
+<refsect2 id="OrcVarType" role="enum">
+<title>enum OrcVarType</title>
+<indexterm zone="OrcVarType"><primary>OrcVarType</primary></indexterm>
+<refsect3 id="OrcVarType.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-VAR-TYPE-TEMP:CAPS">ORC_VAR_TYPE_TEMP</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-VAR-TYPE-SRC:CAPS">ORC_VAR_TYPE_SRC</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-VAR-TYPE-DEST:CAPS">ORC_VAR_TYPE_DEST</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-VAR-TYPE-CONST:CAPS">ORC_VAR_TYPE_CONST</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-VAR-TYPE-PARAM:CAPS">ORC_VAR_TYPE_PARAM</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-VAR-TYPE-ACCUMULATOR:CAPS">ORC_VAR_TYPE_ACCUMULATOR</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+
+</refsect1>
+
+</refentry>

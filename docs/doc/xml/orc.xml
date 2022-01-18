@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="orc-Orc">
+<refmeta>
+<refentrytitle role="top_of_page" id="orc-Orc.top_of_page">Orc</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ORC Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>Orc</refname>
+<refpurpose>Library Initialization</refpurpose>
+</refnamediv>
+
+
+
+<refsect1 id="orc-Orc.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="orc-Orc.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para />
+</refsect1>
+
+</refentry>

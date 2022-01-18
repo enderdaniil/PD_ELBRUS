@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="orc-OrcExecutor">
+<refmeta>
+<refentrytitle role="top_of_page" id="orc-OrcExecutor.top_of_page">OrcExecutor</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ORC Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>OrcExecutor</refname>
+<refpurpose>Running Orc programs</refpurpose>
+</refnamediv>
+
+<refsect1 id="orc-OrcExecutor.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="OrcExecutor">OrcExecutor</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="orc-OrcExecutor.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="orc-OrcExecutor.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para />
+</refsect1>
+<refsect1 id="orc-OrcExecutor.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="OrcExecutor" role="struct">
+<title>struct OrcExecutor</title>
+<indexterm zone="OrcExecutor"><primary>OrcExecutor</primary></indexterm>
+<programlisting language="C">struct OrcExecutor {
+};
+</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

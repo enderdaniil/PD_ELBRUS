@@ -1,0 +1,166 @@
+<?xml version="1.0"?>
+<!DOCTYPE indexdiv PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<indexdiv id="api-index-full">
+<indexdiv><title>A</title>
+<indexentry><primaryie linkends="OrcArmCond"><link linkend="OrcArmCond">OrcArmCond</link>, enum in <link linkend="orc-ARM">ARM</link></primaryie></indexentry>
+<indexentry><primaryie linkends="OrcArmDP"><link linkend="OrcArmDP">OrcArmDP</link>, enum in <link linkend="orc-ARM">ARM</link></primaryie></indexentry>
+<indexentry><primaryie linkends="OrcArmRegister"><link linkend="OrcArmRegister">OrcArmRegister</link>, enum in <link linkend="orc-ARM">ARM</link></primaryie></indexentry>
+<indexentry><primaryie linkends="orc-arm-init"><link linkend="orc-arm-init">orc_arm_init</link>, function in <link linkend="orc-misc">misc</link></primaryie></indexentry>
+<indexentry><primaryie linkends="ORC-ASM-CODE:CAPS"><link linkend="ORC-ASM-CODE:CAPS">ORC_ASM_CODE</link>, macro in <link linkend="orc-OrcCompiler">OrcCompiler</link></primaryie></indexentry>
+<indexentry><primaryie linkends="ORC-ASSERT:CAPS"><link linkend="ORC-ASSERT:CAPS">ORC_ASSERT</link>, macro in <link linkend="orc-Utility-functions">Utility functions</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>C</title>
+<indexentry><primaryie linkends="OrcCompiler"><link linkend="OrcCompiler">OrcCompiler</link>, struct in <link linkend="orc-OrcCompiler">OrcCompiler</link></primaryie></indexentry>
+<indexentry><primaryie linkends="OrcCompileResult"><link linkend="OrcCompileResult">OrcCompileResult</link>, enum in <link linkend="orc-OrcCompiler">OrcCompiler</link></primaryie></indexentry>
+<indexentry><primaryie linkends="ORC-COMPILER-ERROR:CAPS"><link linkend="ORC-COMPILER-ERROR:CAPS">ORC_COMPILER_ERROR</link>, macro in <link linkend="orc-OrcCompiler">OrcCompiler</link></primaryie></indexentry>
+<indexentry><primaryie linkends="ORC-COMPILE-RESULT-IS-FATAL:CAPS"><link linkend="ORC-COMPILE-RESULT-IS-FATAL:CAPS">ORC_COMPILE_RESULT_IS_FATAL</link>, macro in <link linkend="orc-OrcCompiler">OrcCompiler</link></primaryie></indexentry>
+<indexentry><primaryie linkends="ORC-COMPILE-RESULT-IS-SUCCESSFUL:CAPS"><link linkend="ORC-COMPILE-RESULT-IS-SUCCESSFUL:CAPS">ORC_COMPILE_RESULT_IS_SUCCESSFUL</link>, macro in <link linkend="orc-OrcCompiler">OrcCompiler</link></primaryie></indexentry>
+<indexentry><primaryie linkends="OrcConstant"><link linkend="OrcConstant">OrcConstant</link>, struct in <link linkend="orc-OrcCompiler">OrcCompiler</link></primaryie></indexentry>
+<indexentry><primaryie linkends="orc-c-init"><link linkend="orc-c-init">orc_c_init</link>, function in <link linkend="orc-misc">misc</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>D</title>
+<indexentry><primaryie linkends="ORC-DEBUG:CAPS"><link linkend="ORC-DEBUG:CAPS">ORC_DEBUG</link>, macro in <link linkend="orc-OrcDebug">OrcDebug</link></primaryie></indexentry>
+<indexentry><primaryie linkends="OrcDebugLevel"><link linkend="OrcDebugLevel">OrcDebugLevel</link>, enum in <link linkend="orc-OrcDebug">OrcDebug</link></primaryie></indexentry>
+<indexentry><primaryie linkends="OrcDebugPrintFunc"><link linkend="OrcDebugPrintFunc">OrcDebugPrintFunc</link>, user_function in <link linkend="orc-OrcDebug">OrcDebug</link></primaryie></indexentry>
+<indexentry><primaryie linkends="ORC-DEBUG-PRINT:CAPS"><link linkend="ORC-DEBUG-PRINT:CAPS">ORC_DEBUG_PRINT</link>, macro in <link linkend="orc-OrcDebug">OrcDebug</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>E</title>
+<indexentry><primaryie linkends="ORC-ENABLE-ASM-CODE:CAPS"><link linkend="ORC-ENABLE-ASM-CODE:CAPS">ORC_ENABLE_ASM_CODE</link>, macro in <link linkend="orc-OrcCompiler">OrcCompiler</link></primaryie></indexentry>
+<indexentry><primaryie linkends="ORC-ERROR:CAPS"><link linkend="ORC-ERROR:CAPS">ORC_ERROR</link>, macro in <link linkend="orc-OrcDebug">OrcDebug</link></primaryie></indexentry>
+<indexentry><primaryie linkends="OrcExecutor"><link linkend="OrcExecutor">OrcExecutor</link>, struct in <link linkend="orc-OrcExecutor">OrcExecutor</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>F</title>
+<indexentry><primaryie linkends="OrcFixup"><link linkend="OrcFixup">OrcFixup</link>, struct in <link linkend="orc-misc">misc</link></primaryie></indexentry>
+<indexentry><primaryie linkends="ORC-FUNCTION:CAPS"><link linkend="ORC-FUNCTION:CAPS">ORC_FUNCTION</link>, macro in <link linkend="orc-OrcDebug">OrcDebug</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>G</title>
+<indexentry><primaryie linkends="ORC-GP-REG-BASE:CAPS"><link linkend="ORC-GP-REG-BASE:CAPS">ORC_GP_REG_BASE</link>, macro in <link linkend="orc-misc">misc</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>I</title>
+<indexentry><primaryie linkends="ORC-INFO:CAPS"><link linkend="ORC-INFO:CAPS">ORC_INFO</link>, macro in <link linkend="orc-OrcDebug">OrcDebug</link></primaryie></indexentry>
+<indexentry><primaryie linkends="OrcInstruction"><link linkend="OrcInstruction">OrcInstruction</link>, struct in <link linkend="orc-misc">misc</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>L</title>
+<indexentry><primaryie linkends="ORC-LOG:CAPS"><link linkend="ORC-LOG:CAPS">ORC_LOG</link>, macro in <link linkend="orc-OrcDebug">OrcDebug</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>M</title>
+<indexentry><primaryie linkends="OrcMMXRegister"><link linkend="OrcMMXRegister">OrcMMXRegister</link>, enum in <link linkend="orc-MMX">MMX</link></primaryie></indexentry>
+<indexentry><primaryie linkends="orc-mmx-emit-0f"><link linkend="orc-mmx-emit-0f">orc_mmx_emit_0f</link>, function in <link linkend="orc-MMX">MMX</link></primaryie></indexentry>
+<indexentry><primaryie linkends="orc-mmx-emit-660f"><link linkend="orc-mmx-emit-660f">orc_mmx_emit_660f</link>, function in <link linkend="orc-MMX">MMX</link></primaryie></indexentry>
+<indexentry><primaryie linkends="orc-mmx-emit-f20f"><link linkend="orc-mmx-emit-f20f">orc_mmx_emit_f20f</link>, function in <link linkend="orc-MMX">MMX</link></primaryie></indexentry>
+<indexentry><primaryie linkends="orc-mmx-emit-f30f"><link linkend="orc-mmx-emit-f30f">orc_mmx_emit_f30f</link>, function in <link linkend="orc-MMX">MMX</link></primaryie></indexentry>
+<indexentry><primaryie linkends="orc-mmx-emit-loadib"><link linkend="orc-mmx-emit-loadib">orc_mmx_emit_loadib</link>, function in <link linkend="orc-MMX">MMX</link></primaryie></indexentry>
+<indexentry><primaryie linkends="orc-mmx-emit-loadil"><link linkend="orc-mmx-emit-loadil">orc_mmx_emit_loadil</link>, function in <link linkend="orc-MMX">MMX</link></primaryie></indexentry>
+<indexentry><primaryie linkends="orc-mmx-emit-loadiw"><link linkend="orc-mmx-emit-loadiw">orc_mmx_emit_loadiw</link>, function in <link linkend="orc-MMX">MMX</link></primaryie></indexentry>
+<indexentry><primaryie linkends="orc-mmx-emit-loadpb"><link linkend="orc-mmx-emit-loadpb">orc_mmx_emit_loadpb</link>, function in <link linkend="orc-MMX">MMX</link></primaryie></indexentry>
+<indexentry><primaryie linkends="orc-mmx-emit-loadpl"><link linkend="orc-mmx-emit-loadpl">orc_mmx_emit_loadpl</link>, function in <link linkend="orc-MMX">MMX</link></primaryie></indexentry>
+<indexentry><primaryie linkends="orc-mmx-emit-loadpq"><link linkend="orc-mmx-emit-loadpq">orc_mmx_emit_loadpq</link>, function in <link linkend="orc-MMX">MMX</link></primaryie></indexentry>
+<indexentry><primaryie linkends="orc-mmx-emit-loadpw"><link linkend="orc-mmx-emit-loadpw">orc_mmx_emit_loadpw</link>, function in <link linkend="orc-MMX">MMX</link></primaryie></indexentry>
+<indexentry><primaryie linkends="orc-mmx-emit-pshufw"><link linkend="orc-mmx-emit-pshufw">orc_mmx_emit_pshufw</link>, function in <link linkend="orc-MMX">MMX</link></primaryie></indexentry>
+<indexentry><primaryie linkends="orc-mmx-emit-shiftimm"><link linkend="orc-mmx-emit-shiftimm">orc_mmx_emit_shiftimm</link>, function in <link linkend="orc-MMX">MMX</link></primaryie></indexentry>
+<indexentry><primaryie linkends="orc-mmx-init"><link linkend="orc-mmx-init">orc_mmx_init</link>, function in <link linkend="orc-MMX">MMX</link></primaryie></indexentry>
+<indexentry><primaryie linkends="ORC-MMX-SHUF:CAPS"><link linkend="ORC-MMX-SHUF:CAPS">ORC_MMX_SHUF</link>, macro in <link linkend="orc-MMX">MMX</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>N</title>
+<indexentry><primaryie linkends="ORC-N-CONSTANTS:CAPS"><link linkend="ORC-N-CONSTANTS:CAPS">ORC_N_CONSTANTS</link>, macro in <link linkend="orc-OrcProgram">OrcProgram</link></primaryie></indexentry>
+<indexentry><primaryie linkends="ORC-N-FIXUPS:CAPS"><link linkend="ORC-N-FIXUPS:CAPS">ORC_N_FIXUPS</link>, macro in <link linkend="orc-misc">misc</link></primaryie></indexentry>
+<indexentry><primaryie linkends="ORC-N-INSNS:CAPS"><link linkend="ORC-N-INSNS:CAPS">ORC_N_INSNS</link>, macro in <link linkend="orc-misc">misc</link></primaryie></indexentry>
+<indexentry><primaryie linkends="ORC-N-LABELS:CAPS"><link linkend="ORC-N-LABELS:CAPS">ORC_N_LABELS</link>, macro in <link linkend="orc-misc">misc</link></primaryie></indexentry>
+<indexentry><primaryie linkends="ORC-N-REGISTERS:CAPS"><link linkend="ORC-N-REGISTERS:CAPS">ORC_N_REGISTERS</link>, macro in <link linkend="orc-misc">misc</link></primaryie></indexentry>
+<indexentry><primaryie linkends="ORC-N-REGS:CAPS"><link linkend="ORC-N-REGS:CAPS">ORC_N_REGS</link>, macro in <link linkend="orc-misc">misc</link></primaryie></indexentry>
+<indexentry><primaryie linkends="ORC-N-RULE-SETS:CAPS"><link linkend="ORC-N-RULE-SETS:CAPS">ORC_N_RULE_SETS</link>, macro in <link linkend="orc-OrcProgram">OrcProgram</link></primaryie></indexentry>
+<indexentry><primaryie linkends="ORC-N-TARGETS:CAPS"><link linkend="ORC-N-TARGETS:CAPS">ORC_N_TARGETS</link>, macro in <link linkend="orc-OrcProgram">OrcProgram</link></primaryie></indexentry>
+<indexentry><primaryie linkends="ORC-N-VARIABLES:CAPS"><link linkend="ORC-N-VARIABLES:CAPS">ORC_N_VARIABLES</link>, macro in <link linkend="orc-misc">misc</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>O</title>
+<indexentry><primaryie linkends="OrcOpcodeEmulateFunc"><link linkend="OrcOpcodeEmulateFunc">OrcOpcodeEmulateFunc</link>, user_function in <link linkend="orc-OrcOpcode">OrcOpcode</link></primaryie></indexentry>
+<indexentry><primaryie linkends="OrcOpcodeExecutor"><link linkend="OrcOpcodeExecutor">OrcOpcodeExecutor</link>, struct in <link linkend="orc-OrcOpcode">OrcOpcode</link></primaryie></indexentry>
+<indexentry><primaryie linkends="OrcOpcodeSet"><link linkend="OrcOpcodeSet">OrcOpcodeSet</link>, struct in <link linkend="orc-OrcOpcode">OrcOpcode</link></primaryie></indexentry>
+<indexentry><primaryie linkends="ORC-OPCODE-N-ARGS:CAPS"><link linkend="ORC-OPCODE-N-ARGS:CAPS">ORC_OPCODE_N_ARGS</link>, macro in <link linkend="orc-OrcOpcode">OrcOpcode</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>P</title>
+<indexentry><primaryie linkends="powerpc-add-fixup"><link linkend="powerpc-add-fixup">powerpc_add_fixup</link>, function in <link linkend="orc-PowerPC">PowerPC</link></primaryie></indexentry>
+<indexentry><primaryie linkends="powerpc-do-fixups"><link linkend="powerpc-do-fixups">powerpc_do_fixups</link>, function in <link linkend="orc-PowerPC">PowerPC</link></primaryie></indexentry>
+<indexentry><primaryie linkends="powerpc-emit"><link linkend="powerpc-emit">powerpc_emit</link>, function in <link linkend="orc-PowerPC">PowerPC</link></primaryie></indexentry>
+<indexentry><primaryie linkends="powerpc-emit-655510"><link linkend="powerpc-emit-655510">powerpc_emit_655510</link>, function in <link linkend="orc-PowerPC">PowerPC</link></primaryie></indexentry>
+<indexentry><primaryie linkends="powerpc-emit-addi"><link linkend="powerpc-emit-addi">powerpc_emit_addi</link>, function in <link linkend="orc-PowerPC">PowerPC</link></primaryie></indexentry>
+<indexentry><primaryie linkends="powerpc-emit-b"><link linkend="powerpc-emit-b">powerpc_emit_b</link>, function in <link linkend="orc-PowerPC">PowerPC</link></primaryie></indexentry>
+<indexentry><primaryie linkends="powerpc-emit-beq"><link linkend="powerpc-emit-beq">powerpc_emit_beq</link>, function in <link linkend="orc-PowerPC">PowerPC</link></primaryie></indexentry>
+<indexentry><primaryie linkends="powerpc-emit-bne"><link linkend="powerpc-emit-bne">powerpc_emit_bne</link>, function in <link linkend="orc-PowerPC">PowerPC</link></primaryie></indexentry>
+<indexentry><primaryie linkends="powerpc-emit-label"><link linkend="powerpc-emit-label">powerpc_emit_label</link>, function in <link linkend="orc-PowerPC">PowerPC</link></primaryie></indexentry>
+<indexentry><primaryie linkends="powerpc-emit-lwz"><link linkend="powerpc-emit-lwz">powerpc_emit_lwz</link>, function in <link linkend="orc-PowerPC">PowerPC</link></primaryie></indexentry>
+<indexentry><primaryie linkends="powerpc-emit-ret"><link linkend="powerpc-emit-ret">powerpc_emit_ret</link>, function in <link linkend="orc-PowerPC">PowerPC</link></primaryie></indexentry>
+<indexentry><primaryie linkends="powerpc-emit-srawi"><link linkend="powerpc-emit-srawi">powerpc_emit_srawi</link>, function in <link linkend="orc-PowerPC">PowerPC</link></primaryie></indexentry>
+<indexentry><primaryie linkends="powerpc-emit-stwu"><link linkend="powerpc-emit-stwu">powerpc_emit_stwu</link>, function in <link linkend="orc-PowerPC">PowerPC</link></primaryie></indexentry>
+<indexentry><primaryie linkends="powerpc-emit-VA"><link linkend="powerpc-emit-VA">powerpc_emit_VA</link>, function in <link linkend="orc-PowerPC">PowerPC</link></primaryie></indexentry>
+<indexentry><primaryie linkends="powerpc-emit-VX"><link linkend="powerpc-emit-VX">powerpc_emit_VX</link>, function in <link linkend="orc-PowerPC">PowerPC</link></primaryie></indexentry>
+<indexentry><primaryie linkends="powerpc-emit-VX-2"><link linkend="powerpc-emit-VX-2">powerpc_emit_VX_2</link>, function in <link linkend="orc-PowerPC">PowerPC</link></primaryie></indexentry>
+<indexentry><primaryie linkends="powerpc-emit-X"><link linkend="powerpc-emit-X">powerpc_emit_X</link>, function in <link linkend="orc-PowerPC">PowerPC</link></primaryie></indexentry>
+<indexentry><primaryie linkends="powerpc-get-constant"><link linkend="powerpc-get-constant">powerpc_get_constant</link>, function in <link linkend="orc-PowerPC">PowerPC</link></primaryie></indexentry>
+<indexentry><primaryie linkends="powerpc-get-regname"><link linkend="powerpc-get-regname">powerpc_get_regname</link>, function in <link linkend="orc-PowerPC">PowerPC</link></primaryie></indexentry>
+<indexentry><primaryie linkends="orc-powerpc-init"><link linkend="orc-powerpc-init">orc_powerpc_init</link>, function in <link linkend="orc-misc">misc</link></primaryie></indexentry>
+<indexentry><primaryie linkends="powerpc-regnum"><link linkend="powerpc-regnum">powerpc_regnum</link>, function in <link linkend="orc-PowerPC">PowerPC</link></primaryie></indexentry>
+<indexentry><primaryie linkends="OrcProgram"><link linkend="OrcProgram">OrcProgram</link>, struct in <link linkend="orc-OrcProgram">OrcProgram</link></primaryie></indexentry>
+<indexentry><primaryie linkends="ORC-PROGRAM-ERROR:CAPS"><link linkend="ORC-PROGRAM-ERROR:CAPS">ORC_PROGRAM_ERROR</link>, macro in <link linkend="orc-OrcProgram">OrcProgram</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>R</title>
+<indexentry><primaryie linkends="OrcRule"><link linkend="OrcRule">OrcRule</link>, struct in <link linkend="orc-misc">misc</link></primaryie></indexentry>
+<indexentry><primaryie linkends="OrcRuleEmitFunc"><link linkend="OrcRuleEmitFunc">OrcRuleEmitFunc</link>, user_function in <link linkend="orc-misc">misc</link></primaryie></indexentry>
+<indexentry><primaryie linkends="OrcRuleSet"><link linkend="OrcRuleSet">OrcRuleSet</link>, struct in <link linkend="orc-OrcOpcode">OrcOpcode</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>S</title>
+<indexentry><primaryie linkends="OrcSSERegister"><link linkend="OrcSSERegister">OrcSSERegister</link>, enum in <link linkend="orc-SSE">SSE</link></primaryie></indexentry>
+<indexentry><primaryie linkends="orc-sse-emit-pshufd"><link linkend="orc-sse-emit-pshufd">orc_sse_emit_pshufd</link>, macro in <link linkend="orc-SSE">SSE</link></primaryie></indexentry>
+<indexentry><primaryie linkends="orc-sse-emit-pshuflw"><link linkend="orc-sse-emit-pshuflw">orc_sse_emit_pshuflw</link>, macro in <link linkend="orc-SSE">SSE</link></primaryie></indexentry>
+<indexentry><primaryie linkends="orc-sse-init"><link linkend="orc-sse-init">orc_sse_init</link>, function in <link linkend="orc-SSE">SSE</link></primaryie></indexentry>
+<indexentry><primaryie linkends="ORC-SSE-SHUF:CAPS"><link linkend="ORC-SSE-SHUF:CAPS">ORC_SSE_SHUF</link>, macro in <link linkend="orc-SSE">SSE</link></primaryie></indexentry>
+<indexentry><primaryie linkends="OrcStaticOpcode"><link linkend="OrcStaticOpcode">OrcStaticOpcode</link>, struct in <link linkend="orc-OrcOpcode">OrcOpcode</link></primaryie></indexentry>
+<indexentry><primaryie linkends="ORC-STATIC-OPCODE-ACCUMULATOR:CAPS"><link linkend="ORC-STATIC-OPCODE-ACCUMULATOR:CAPS">ORC_STATIC_OPCODE_ACCUMULATOR</link>, macro in <link linkend="orc-OrcOpcode">OrcOpcode</link></primaryie></indexentry>
+<indexentry><primaryie linkends="ORC-STATIC-OPCODE-N-DEST:CAPS"><link linkend="ORC-STATIC-OPCODE-N-DEST:CAPS">ORC_STATIC_OPCODE_N_DEST</link>, macro in <link linkend="orc-OrcOpcode">OrcOpcode</link></primaryie></indexentry>
+<indexentry><primaryie linkends="ORC-STATIC-OPCODE-N-SRC:CAPS"><link linkend="ORC-STATIC-OPCODE-N-SRC:CAPS">ORC_STATIC_OPCODE_N_SRC</link>, macro in <link linkend="orc-OrcOpcode">OrcOpcode</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>T</title>
+<indexentry><primaryie linkends="OrcTarget"><link linkend="OrcTarget">OrcTarget</link>, struct in <link linkend="orc-OrcOpcode">OrcOpcode</link></primaryie></indexentry>
+<indexentry><primaryie linkends="OrcTargetMMXFlags"><link linkend="OrcTargetMMXFlags">OrcTargetMMXFlags</link>, enum in <link linkend="orc-MMX">MMX</link></primaryie></indexentry>
+<indexentry><primaryie linkends="OrcTargetSSEFlags"><link linkend="OrcTargetSSEFlags">OrcTargetSSEFlags</link>, enum in <link linkend="orc-SSE">SSE</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>V</title>
+<indexentry><primaryie linkends="OrcVariable"><link linkend="OrcVariable">OrcVariable</link>, struct in <link linkend="orc-misc">misc</link></primaryie></indexentry>
+<indexentry><primaryie linkends="OrcVarType"><link linkend="OrcVarType">OrcVarType</link>, enum in <link linkend="orc-misc">misc</link></primaryie></indexentry>
+<indexentry><primaryie linkends="ORC-VEC-REG-BASE:CAPS"><link linkend="ORC-VEC-REG-BASE:CAPS">ORC_VEC_REG_BASE</link>, macro in <link linkend="orc-misc">misc</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>W</title>
+<indexentry><primaryie linkends="ORC-WARNING:CAPS"><link linkend="ORC-WARNING:CAPS">ORC_WARNING</link>, macro in <link linkend="orc-OrcDebug">OrcDebug</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>X</title>
+<indexentry><primaryie linkends="orc-x86-emit-add-imm-memoffset"><link linkend="orc-x86-emit-add-imm-memoffset">orc_x86_emit_add_imm_memoffset</link>, macro in <link linkend="orc-x86">x86</link></primaryie></indexentry>
+<indexentry><primaryie linkends="orc-x86-emit-add-reg-memoffset"><link linkend="orc-x86-emit-add-reg-memoffset">orc_x86_emit_add_reg_memoffset</link>, macro in <link linkend="orc-x86">x86</link></primaryie></indexentry>
+<indexentry><primaryie linkends="orc-x86-emit-align"><link linkend="orc-x86-emit-align">orc_x86_emit_align</link>, macro in <link linkend="orc-x86">x86</link></primaryie></indexentry>
+<indexentry><primaryie linkends="orc-x86-emit-and-imm-memoffset"><link linkend="orc-x86-emit-and-imm-memoffset">orc_x86_emit_and_imm_memoffset</link>, macro in <link linkend="orc-x86">x86</link></primaryie></indexentry>
+<indexentry><primaryie linkends="orc-x86-emit-and-imm-reg"><link linkend="orc-x86-emit-and-imm-reg">orc_x86_emit_and_imm_reg</link>, macro in <link linkend="orc-x86">x86</link></primaryie></indexentry>
+<indexentry><primaryie linkends="orc-x86-emit-cmp-reg-memoffset"><link linkend="orc-x86-emit-cmp-reg-memoffset">orc_x86_emit_cmp_reg_memoffset</link>, macro in <link linkend="orc-x86">x86</link></primaryie></indexentry>
+<indexentry><primaryie linkends="orc-x86-emit-emms"><link linkend="orc-x86-emit-emms">orc_x86_emit_emms</link>, macro in <link linkend="orc-x86">x86</link></primaryie></indexentry>
+<indexentry><primaryie linkends="orc-x86-emit-je"><link linkend="orc-x86-emit-je">orc_x86_emit_je</link>, macro in <link linkend="orc-x86">x86</link></primaryie></indexentry>
+<indexentry><primaryie linkends="orc-x86-emit-jle"><link linkend="orc-x86-emit-jle">orc_x86_emit_jle</link>, macro in <link linkend="orc-x86">x86</link></primaryie></indexentry>
+<indexentry><primaryie linkends="orc-x86-emit-jmp"><link linkend="orc-x86-emit-jmp">orc_x86_emit_jmp</link>, macro in <link linkend="orc-x86">x86</link></primaryie></indexentry>
+<indexentry><primaryie linkends="orc-x86-emit-jne"><link linkend="orc-x86-emit-jne">orc_x86_emit_jne</link>, macro in <link linkend="orc-x86">x86</link></primaryie></indexentry>
+<indexentry><primaryie linkends="orc-x86-emit-label"><link linkend="orc-x86-emit-label">orc_x86_emit_label</link>, macro in <link linkend="orc-x86">x86</link></primaryie></indexentry>
+<indexentry><primaryie linkends="orc-x86-emit-mov-imm-reg"><link linkend="orc-x86-emit-mov-imm-reg">orc_x86_emit_mov_imm_reg</link>, macro in <link linkend="orc-x86">x86</link></primaryie></indexentry>
+<indexentry><primaryie linkends="orc-x86-emit-mov-memoffset-mmx"><link linkend="orc-x86-emit-mov-memoffset-mmx">orc_x86_emit_mov_memoffset_mmx</link>, function in <link linkend="orc-x86">x86</link></primaryie></indexentry>
+<indexentry><primaryie linkends="orc-x86-emit-mov-mmx-memoffset"><link linkend="orc-x86-emit-mov-mmx-memoffset">orc_x86_emit_mov_mmx_memoffset</link>, function in <link linkend="orc-x86">x86</link></primaryie></indexentry>
+<indexentry><primaryie linkends="orc-x86-emit-mov-mmx-reg"><link linkend="orc-x86-emit-mov-mmx-reg">orc_x86_emit_mov_mmx_reg</link>, function in <link linkend="orc-x86">x86</link></primaryie></indexentry>
+<indexentry><primaryie linkends="orc-x86-emit-mov-mmx-reg-reg"><link linkend="orc-x86-emit-mov-mmx-reg-reg">orc_x86_emit_mov_mmx_reg_reg</link>, function in <link linkend="orc-x86">x86</link></primaryie></indexentry>
+<indexentry><primaryie linkends="orc-x86-emit-mov-reg-mmx"><link linkend="orc-x86-emit-mov-reg-mmx">orc_x86_emit_mov_reg_mmx</link>, function in <link linkend="orc-x86">x86</link></primaryie></indexentry>
+<indexentry><primaryie linkends="orc-x86-emit-mov-reg-reg"><link linkend="orc-x86-emit-mov-reg-reg">orc_x86_emit_mov_reg_reg</link>, macro in <link linkend="orc-x86">x86</link></primaryie></indexentry>
+<indexentry><primaryie linkends="orc-x86-emit-ret"><link linkend="orc-x86-emit-ret">orc_x86_emit_ret</link>, macro in <link linkend="orc-x86">x86</link></primaryie></indexentry>
+<indexentry><primaryie linkends="orc-x86-emit-sar-imm-reg"><link linkend="orc-x86-emit-sar-imm-reg">orc_x86_emit_sar_imm_reg</link>, macro in <link linkend="orc-x86">x86</link></primaryie></indexentry>
+<indexentry><primaryie linkends="orc-x86-emit-sub-memoffset-reg"><link linkend="orc-x86-emit-sub-memoffset-reg">orc_x86_emit_sub_memoffset_reg</link>, macro in <link linkend="orc-x86">x86</link></primaryie></indexentry>
+<indexentry><primaryie linkends="orc-x86-emit-sub-reg-reg"><link linkend="orc-x86-emit-sub-reg-reg">orc_x86_emit_sub_reg_reg</link>, macro in <link linkend="orc-x86">x86</link></primaryie></indexentry>
+<indexentry><primaryie linkends="orc-x86-emit-test-reg-reg"><link linkend="orc-x86-emit-test-reg-reg">orc_x86_emit_test_reg_reg</link>, macro in <link linkend="orc-x86">x86</link></primaryie></indexentry>
+<indexentry><primaryie linkends="orc-x86-get-regname-mmx"><link linkend="orc-x86-get-regname-mmx">orc_x86_get_regname_mmx</link>, function in <link linkend="orc-x86">x86</link></primaryie></indexentry>
+</indexdiv>
+</indexdiv>

@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>OrcCompiler: Orc Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="Orc Reference Manual">
+<link rel="up" href="ch02.html" title="Application API">
+<link rel="prev" href="orc-OrcProgram.html" title="OrcProgram">
+<link rel="next" href="orc-OrcExecutor.html" title="OrcExecutor">
+<meta name="generator" content="GTK-Doc V1.32 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#orc-OrcCompiler.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch02.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="orc-OrcProgram.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="orc-OrcExecutor.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="orc-OrcCompiler"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="orc-OrcCompiler.top_of_page"></a>OrcCompiler</span></h2>
+<p>OrcCompiler — Compile Orc programs</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="orc-OrcCompiler.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="orc-OrcCompiler.html#ORC-COMPILER-ERROR:CAPS" title="ORC_COMPILER_ERROR()">ORC_COMPILER_ERROR</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="orc-OrcCompiler.html#ORC-COMPILE-RESULT-IS-FATAL:CAPS" title="ORC_COMPILE_RESULT_IS_FATAL()">ORC_COMPILE_RESULT_IS_FATAL</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="orc-OrcCompiler.html#ORC-COMPILE-RESULT-IS-SUCCESSFUL:CAPS" title="ORC_COMPILE_RESULT_IS_SUCCESSFUL()">ORC_COMPILE_RESULT_IS_SUCCESSFUL</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="orc-OrcCompiler.html#ORC-ASM-CODE:CAPS" title="ORC_ASM_CODE()">ORC_ASM_CODE</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="orc-OrcCompiler.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="orc-OrcCompiler.html#OrcCompileResult" title="enum OrcCompileResult">OrcCompileResult</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="orc-OrcCompiler.html#OrcCompiler" title="struct OrcCompiler">OrcCompiler</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="orc-OrcCompiler.html#OrcConstant" title="struct OrcConstant">OrcConstant</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="orc-OrcCompiler.html#ORC-ENABLE-ASM-CODE:CAPS" title="ORC_ENABLE_ASM_CODE">ORC_ENABLE_ASM_CODE</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="orc-OrcCompiler.description"></a><h2>Description</h2>
+<p>OrcCompiler is the object used to convert Orc programs contained
+in an OrcProgram object into assembly code and object code.</p>
+<p>The OrcCompileResult enum is used to indicate whether or not
+a compilation attempt was successful or not.  The macros
+<a class="link" href="orc-OrcCompiler.html#ORC-COMPILE-RESULT-IS-SUCCESSFUL:CAPS" title="ORC_COMPILE_RESULT_IS_SUCCESSFUL()"><code class="function">ORC_COMPILE_RESULT_IS_SUCCESSFUL()</code></a> and <a class="link" href="orc-OrcCompiler.html#ORC-COMPILE-RESULT-IS-FATAL:CAPS" title="ORC_COMPILE_RESULT_IS_FATAL()"><code class="function">ORC_COMPILE_RESULT_IS_FATAL()</code></a>
+should be used instead of checking values directly.</p>
+<p>When a program is compiled, the compiler calls the functions
+contained in various OrcRule structures.  These functions generate
+assembly and object instructions by calling <a class="link" href="orc-OrcCompiler.html#ORC-ASM-CODE:CAPS" title="ORC_ASM_CODE()"><code class="function">ORC_ASM_CODE()</code></a>
+or functions that use <a class="link" href="orc-OrcCompiler.html#ORC-ASM-CODE:CAPS" title="ORC_ASM_CODE()"><code class="function">ORC_ASM_CODE()</code></a> internally.</p>
+</div>
+<div class="refsect1">
+<a name="orc-OrcCompiler.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="ORC-COMPILER-ERROR:CAPS"></a><h3>ORC_COMPILER_ERROR()</h3>
+<pre class="programlisting">#define             ORC_COMPILER_ERROR(compiler, ...)</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ORC-COMPILE-RESULT-IS-FATAL:CAPS"></a><h3>ORC_COMPILE_RESULT_IS_FATAL()</h3>
+<pre class="programlisting">#define ORC_COMPILE_RESULT_IS_FATAL(x) ((x) &gt;= 0x200)
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ORC-COMPILE-RESULT-IS-SUCCESSFUL:CAPS"></a><h3>ORC_COMPILE_RESULT_IS_SUCCESSFUL()</h3>
+<pre class="programlisting">#define ORC_COMPILE_RESULT_IS_SUCCESSFUL(x) ((x) &lt; 0x100)
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ORC-ASM-CODE:CAPS"></a><h3>ORC_ASM_CODE()</h3>
+<pre class="programlisting">#define ORC_ASM_CODE(compiler,...) orc_compiler_append_code(compiler, __VA_ARGS__)
+</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="orc-OrcCompiler.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="OrcCompileResult"></a><h3>enum OrcCompileResult</h3>
+<div class="refsect3">
+<a name="OrcCompileResult.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="ORC-COMPILE-RESULT-OK:CAPS"></a>ORC_COMPILE_RESULT_OK</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ORC-COMPILE-RESULT-UNKNOWN-COMPILE:CAPS"></a>ORC_COMPILE_RESULT_UNKNOWN_COMPILE</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ORC-COMPILE-RESULT-MISSING-RULE:CAPS"></a>ORC_COMPILE_RESULT_MISSING_RULE</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ORC-COMPILE-RESULT-UNKNOWN-PARSE:CAPS"></a>ORC_COMPILE_RESULT_UNKNOWN_PARSE</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ORC-COMPILE-RESULT-PARSE:CAPS"></a>ORC_COMPILE_RESULT_PARSE</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ORC-COMPILE-RESULT-VARIABLE:CAPS"></a>ORC_COMPILE_RESULT_VARIABLE</p></td>
+<td> </td>
+<td> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="OrcCompiler"></a><h3>struct OrcCompiler</h3>
+<pre class="programlisting">struct OrcCompiler {
+};
+</pre>
+<p>The OrcCompiler structure has no public members</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="OrcConstant"></a><h3>struct OrcConstant</h3>
+<pre class="programlisting">struct OrcConstant {
+};
+</pre>
+<p>The OrcConstant structure has no public members</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ORC-ENABLE-ASM-CODE:CAPS"></a><h3>ORC_ENABLE_ASM_CODE</h3>
+<pre class="programlisting">#define ORC_ENABLE_ASM_CODE
+</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.32</div>
+</body>
+</html>

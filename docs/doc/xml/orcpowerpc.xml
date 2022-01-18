@@ -1,0 +1,248 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="orc-PowerPC">
+<refmeta>
+<refentrytitle role="top_of_page" id="orc-PowerPC.top_of_page">PowerPC</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ORC Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>PowerPC</refname>
+<refpurpose>code generation for PowerPC</refpurpose>
+</refnamediv>
+
+<refsect1 id="orc-PowerPC.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="powerpc-get-regname">powerpc_get_regname</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="powerpc-regnum">powerpc_regnum</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="powerpc-add-fixup">powerpc_add_fixup</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="powerpc-do-fixups">powerpc_do_fixups</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="powerpc-emit">powerpc_emit</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="powerpc-emit-655510">powerpc_emit_655510</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="powerpc-emit-VA">powerpc_emit_VA</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="powerpc-emit-VX">powerpc_emit_VX</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="powerpc-emit-VX-2">powerpc_emit_VX_2</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="powerpc-emit-X">powerpc_emit_X</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="powerpc-emit-addi">powerpc_emit_addi</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="powerpc-emit-b">powerpc_emit_b</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="powerpc-emit-beq">powerpc_emit_beq</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="powerpc-emit-bne">powerpc_emit_bne</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="powerpc-emit-label">powerpc_emit_label</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="powerpc-emit-lwz">powerpc_emit_lwz</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="powerpc-emit-ret">powerpc_emit_ret</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="powerpc-emit-srawi">powerpc_emit_srawi</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="powerpc-emit-stwu">powerpc_emit_stwu</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="powerpc-get-constant">powerpc_get_constant</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="orc-PowerPC.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="orc-PowerPC.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="powerpc-get-regname" role="function">
+<title>powerpc_get_regname&#160;()</title>
+<indexterm zone="powerpc-get-regname"><primary>powerpc_get_regname</primary></indexterm>
+<programlisting language="C">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+powerpc_get_regname (<parameter><link linkend="int"><type>int</type></link> i</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="powerpc-regnum" role="function">
+<title>powerpc_regnum&#160;()</title>
+<indexterm zone="powerpc-regnum"><primary>powerpc_regnum</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+powerpc_regnum (<parameter><link linkend="int"><type>int</type></link> i</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="powerpc-add-fixup" role="function">
+<title>powerpc_add_fixup&#160;()</title>
+<indexterm zone="powerpc-add-fixup"><primary>powerpc_add_fixup</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+powerpc_add_fixup (<parameter><link linkend="OrcCompiler"><type>OrcCompiler</type></link> *compiler</parameter>,
+                   <parameter><link linkend="int"><type>int</type></link> type</parameter>,
+                   <parameter>unsigned <link linkend="char"><type>char</type></link> *ptr</parameter>,
+                   <parameter><link linkend="int"><type>int</type></link> label</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="powerpc-do-fixups" role="function">
+<title>powerpc_do_fixups&#160;()</title>
+<indexterm zone="powerpc-do-fixups"><primary>powerpc_do_fixups</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+powerpc_do_fixups (<parameter><link linkend="OrcCompiler"><type>OrcCompiler</type></link> *compiler</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="powerpc-emit" role="function">
+<title>powerpc_emit&#160;()</title>
+<indexterm zone="powerpc-emit"><primary>powerpc_emit</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+powerpc_emit (<parameter><link linkend="OrcCompiler"><type>OrcCompiler</type></link> *compiler</parameter>,
+              <parameter>unsigned <link linkend="int"><type>int</type></link> insn</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="powerpc-emit-655510" role="function">
+<title>powerpc_emit_655510&#160;()</title>
+<indexterm zone="powerpc-emit-655510"><primary>powerpc_emit_655510</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+powerpc_emit_655510 (<parameter><link linkend="OrcCompiler"><type>OrcCompiler</type></link> *compiler</parameter>,
+                     <parameter><link linkend="int"><type>int</type></link> major</parameter>,
+                     <parameter><link linkend="int"><type>int</type></link> d</parameter>,
+                     <parameter><link linkend="int"><type>int</type></link> a</parameter>,
+                     <parameter><link linkend="int"><type>int</type></link> b</parameter>,
+                     <parameter><link linkend="int"><type>int</type></link> minor</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="powerpc-emit-VA" role="function">
+<title>powerpc_emit_VA&#160;()</title>
+<indexterm zone="powerpc-emit-VA"><primary>powerpc_emit_VA</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+powerpc_emit_VA (<parameter><link linkend="OrcCompiler"><type>OrcCompiler</type></link> *compiler</parameter>,
+                 <parameter>const <link linkend="char"><type>char</type></link> *name</parameter>,
+                 <parameter>unsigned <link linkend="int"><type>int</type></link> insn</parameter>,
+                 <parameter><link linkend="int"><type>int</type></link> d</parameter>,
+                 <parameter><link linkend="int"><type>int</type></link> a</parameter>,
+                 <parameter><link linkend="int"><type>int</type></link> b</parameter>,
+                 <parameter><link linkend="int"><type>int</type></link> c</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="powerpc-emit-VX" role="function">
+<title>powerpc_emit_VX&#160;()</title>
+<indexterm zone="powerpc-emit-VX"><primary>powerpc_emit_VX</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+powerpc_emit_VX (<parameter><link linkend="OrcCompiler"><type>OrcCompiler</type></link> *compiler</parameter>,
+                 <parameter>unsigned <link linkend="int"><type>int</type></link> insn</parameter>,
+                 <parameter><link linkend="int"><type>int</type></link> d</parameter>,
+                 <parameter><link linkend="int"><type>int</type></link> a</parameter>,
+                 <parameter><link linkend="int"><type>int</type></link> b</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="powerpc-emit-VX-2" role="function">
+<title>powerpc_emit_VX_2&#160;()</title>
+<indexterm zone="powerpc-emit-VX-2"><primary>powerpc_emit_VX_2</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+powerpc_emit_VX_2 (<parameter><link linkend="OrcCompiler"><type>OrcCompiler</type></link> *p</parameter>,
+                   <parameter>const <link linkend="char"><type>char</type></link> *name</parameter>,
+                   <parameter>unsigned <link linkend="int"><type>int</type></link> insn</parameter>,
+                   <parameter><link linkend="int"><type>int</type></link> d</parameter>,
+                   <parameter><link linkend="int"><type>int</type></link> a</parameter>,
+                   <parameter><link linkend="int"><type>int</type></link> b</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="powerpc-emit-X" role="function">
+<title>powerpc_emit_X&#160;()</title>
+<indexterm zone="powerpc-emit-X"><primary>powerpc_emit_X</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+powerpc_emit_X (<parameter><link linkend="OrcCompiler"><type>OrcCompiler</type></link> *compiler</parameter>,
+                <parameter>unsigned <link linkend="int"><type>int</type></link> insn</parameter>,
+                <parameter><link linkend="int"><type>int</type></link> d</parameter>,
+                <parameter><link linkend="int"><type>int</type></link> a</parameter>,
+                <parameter><link linkend="int"><type>int</type></link> b</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="powerpc-emit-addi" role="function">
+<title>powerpc_emit_addi&#160;()</title>
+<indexterm zone="powerpc-emit-addi"><primary>powerpc_emit_addi</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+powerpc_emit_addi (<parameter><link linkend="OrcCompiler"><type>OrcCompiler</type></link> *compiler</parameter>,
+                   <parameter><link linkend="int"><type>int</type></link> regd</parameter>,
+                   <parameter><link linkend="int"><type>int</type></link> rega</parameter>,
+                   <parameter><link linkend="int"><type>int</type></link> imm</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="powerpc-emit-b" role="function">
+<title>powerpc_emit_b&#160;()</title>
+<indexterm zone="powerpc-emit-b"><primary>powerpc_emit_b</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+powerpc_emit_b (<parameter><link linkend="OrcCompiler"><type>OrcCompiler</type></link> *compiler</parameter>,
+                <parameter><link linkend="int"><type>int</type></link> label</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="powerpc-emit-beq" role="function">
+<title>powerpc_emit_beq&#160;()</title>
+<indexterm zone="powerpc-emit-beq"><primary>powerpc_emit_beq</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+powerpc_emit_beq (<parameter><link linkend="OrcCompiler"><type>OrcCompiler</type></link> *compiler</parameter>,
+                  <parameter><link linkend="int"><type>int</type></link> label</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="powerpc-emit-bne" role="function">
+<title>powerpc_emit_bne&#160;()</title>
+<indexterm zone="powerpc-emit-bne"><primary>powerpc_emit_bne</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+powerpc_emit_bne (<parameter><link linkend="OrcCompiler"><type>OrcCompiler</type></link> *compiler</parameter>,
+                  <parameter><link linkend="int"><type>int</type></link> label</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="powerpc-emit-label" role="function">
+<title>powerpc_emit_label&#160;()</title>
+<indexterm zone="powerpc-emit-label"><primary>powerpc_emit_label</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+powerpc_emit_label (<parameter><link linkend="OrcCompiler"><type>OrcCompiler</type></link> *compiler</parameter>,
+                    <parameter><link linkend="int"><type>int</type></link> label</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="powerpc-emit-lwz" role="function">
+<title>powerpc_emit_lwz&#160;()</title>
+<indexterm zone="powerpc-emit-lwz"><primary>powerpc_emit_lwz</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+powerpc_emit_lwz (<parameter><link linkend="OrcCompiler"><type>OrcCompiler</type></link> *compiler</parameter>,
+                  <parameter><link linkend="int"><type>int</type></link> regd</parameter>,
+                  <parameter><link linkend="int"><type>int</type></link> rega</parameter>,
+                  <parameter><link linkend="int"><type>int</type></link> imm</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="powerpc-emit-ret" role="function">
+<title>powerpc_emit_ret&#160;()</title>
+<indexterm zone="powerpc-emit-ret"><primary>powerpc_emit_ret</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+powerpc_emit_ret (<parameter><link linkend="OrcCompiler"><type>OrcCompiler</type></link> *compiler</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="powerpc-emit-srawi" role="function">
+<title>powerpc_emit_srawi&#160;()</title>
+<indexterm zone="powerpc-emit-srawi"><primary>powerpc_emit_srawi</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+powerpc_emit_srawi (<parameter><link linkend="OrcCompiler"><type>OrcCompiler</type></link> *compiler</parameter>,
+                    <parameter><link linkend="int"><type>int</type></link> regd</parameter>,
+                    <parameter><link linkend="int"><type>int</type></link> rega</parameter>,
+                    <parameter><link linkend="int"><type>int</type></link> shift</parameter>,
+                    <parameter><link linkend="int"><type>int</type></link> record</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="powerpc-emit-stwu" role="function">
+<title>powerpc_emit_stwu&#160;()</title>
+<indexterm zone="powerpc-emit-stwu"><primary>powerpc_emit_stwu</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+powerpc_emit_stwu (<parameter><link linkend="OrcCompiler"><type>OrcCompiler</type></link> *compiler</parameter>,
+                   <parameter><link linkend="int"><type>int</type></link> regs</parameter>,
+                   <parameter><link linkend="int"><type>int</type></link> rega</parameter>,
+                   <parameter><link linkend="int"><type>int</type></link> offset</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="powerpc-get-constant" role="function">
+<title>powerpc_get_constant&#160;()</title>
+<indexterm zone="powerpc-get-constant"><primary>powerpc_get_constant</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+powerpc_get_constant (<parameter><link linkend="OrcCompiler"><type>OrcCompiler</type></link> *p</parameter>,
+                      <parameter><link linkend="int"><type>int</type></link> type</parameter>,
+                      <parameter><link linkend="int"><type>int</type></link> value</parameter>);</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

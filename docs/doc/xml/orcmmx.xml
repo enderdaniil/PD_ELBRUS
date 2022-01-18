@@ -1,0 +1,296 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="orc-MMX">
+<refmeta>
+<refentrytitle role="top_of_page" id="orc-MMX.top_of_page">MMX</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ORC Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>MMX</refname>
+<refpurpose>code generation for MMX</refpurpose>
+</refnamediv>
+
+<refsect1 id="orc-MMX.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ORC-MMX-SHUF:CAPS">ORC_MMX_SHUF</link><phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="orc-mmx-emit-0f">orc_mmx_emit_0f</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="orc-mmx-emit-660f">orc_mmx_emit_660f</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="orc-mmx-emit-f20f">orc_mmx_emit_f20f</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="orc-mmx-emit-f30f">orc_mmx_emit_f30f</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="orc-mmx-emit-loadib">orc_mmx_emit_loadib</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="orc-mmx-emit-loadil">orc_mmx_emit_loadil</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="orc-mmx-emit-loadiw">orc_mmx_emit_loadiw</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="orc-mmx-emit-loadpb">orc_mmx_emit_loadpb</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="orc-mmx-emit-loadpl">orc_mmx_emit_loadpl</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="orc-mmx-emit-loadpq">orc_mmx_emit_loadpq</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="orc-mmx-emit-loadpw">orc_mmx_emit_loadpw</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="orc-mmx-emit-pshufw">orc_mmx_emit_pshufw</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="orc-mmx-emit-shiftimm">orc_mmx_emit_shiftimm</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="orc-mmx-init">orc_mmx_init</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="orc-MMX.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="OrcMMXRegister">OrcMMXRegister</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="OrcTargetMMXFlags">OrcTargetMMXFlags</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="orc-MMX.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="orc-MMX.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="ORC-MMX-SHUF:CAPS" role="macro">
+<title>ORC_MMX_SHUF()</title>
+<indexterm zone="ORC-MMX-SHUF:CAPS"><primary>ORC_MMX_SHUF</primary></indexterm>
+<programlisting language="C">#define ORC_MMX_SHUF(a,b,c,d) ((((a)&amp;3)&lt;&lt;6)|(((b)&amp;3)&lt;&lt;4)|(((c)&amp;3)&lt;&lt;2)|(((d)&amp;3)&lt;&lt;0))
+</programlisting>
+</refsect2>
+<refsect2 id="orc-mmx-emit-0f" role="function">
+<title>orc_mmx_emit_0f&#160;()</title>
+<indexterm zone="orc-mmx-emit-0f"><primary>orc_mmx_emit_0f</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+orc_mmx_emit_0f (<parameter><link linkend="OrcCompiler"><type>OrcCompiler</type></link> *p</parameter>,
+                 <parameter>const <link linkend="char"><type>char</type></link> *insn_name</parameter>,
+                 <parameter><link linkend="int"><type>int</type></link> code</parameter>,
+                 <parameter><link linkend="int"><type>int</type></link> src</parameter>,
+                 <parameter><link linkend="int"><type>int</type></link> dest</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="orc-mmx-emit-660f" role="function">
+<title>orc_mmx_emit_660f&#160;()</title>
+<indexterm zone="orc-mmx-emit-660f"><primary>orc_mmx_emit_660f</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+orc_mmx_emit_660f (<parameter><link linkend="OrcCompiler"><type>OrcCompiler</type></link> *p</parameter>,
+                   <parameter>const <link linkend="char"><type>char</type></link> *insn_name</parameter>,
+                   <parameter><link linkend="int"><type>int</type></link> code</parameter>,
+                   <parameter><link linkend="int"><type>int</type></link> src</parameter>,
+                   <parameter><link linkend="int"><type>int</type></link> dest</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="orc-mmx-emit-f20f" role="function">
+<title>orc_mmx_emit_f20f&#160;()</title>
+<indexterm zone="orc-mmx-emit-f20f"><primary>orc_mmx_emit_f20f</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+orc_mmx_emit_f20f (<parameter><link linkend="OrcCompiler"><type>OrcCompiler</type></link> *p</parameter>,
+                   <parameter>const <link linkend="char"><type>char</type></link> *insn_name</parameter>,
+                   <parameter><link linkend="int"><type>int</type></link> code</parameter>,
+                   <parameter><link linkend="int"><type>int</type></link> src</parameter>,
+                   <parameter><link linkend="int"><type>int</type></link> dest</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="orc-mmx-emit-f30f" role="function">
+<title>orc_mmx_emit_f30f&#160;()</title>
+<indexterm zone="orc-mmx-emit-f30f"><primary>orc_mmx_emit_f30f</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+orc_mmx_emit_f30f (<parameter><link linkend="OrcCompiler"><type>OrcCompiler</type></link> *p</parameter>,
+                   <parameter>const <link linkend="char"><type>char</type></link> *insn_name</parameter>,
+                   <parameter><link linkend="int"><type>int</type></link> code</parameter>,
+                   <parameter><link linkend="int"><type>int</type></link> src</parameter>,
+                   <parameter><link linkend="int"><type>int</type></link> dest</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="orc-mmx-emit-loadib" role="function">
+<title>orc_mmx_emit_loadib&#160;()</title>
+<indexterm zone="orc-mmx-emit-loadib"><primary>orc_mmx_emit_loadib</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+orc_mmx_emit_loadib (<parameter><link linkend="OrcCompiler"><type>OrcCompiler</type></link> *p</parameter>,
+                     <parameter><link linkend="int"><type>int</type></link> reg</parameter>,
+                     <parameter><link linkend="int"><type>int</type></link> value</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="orc-mmx-emit-loadil" role="function">
+<title>orc_mmx_emit_loadil&#160;()</title>
+<indexterm zone="orc-mmx-emit-loadil"><primary>orc_mmx_emit_loadil</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+orc_mmx_emit_loadil (<parameter><link linkend="OrcCompiler"><type>OrcCompiler</type></link> *p</parameter>,
+                     <parameter><link linkend="int"><type>int</type></link> reg</parameter>,
+                     <parameter><link linkend="int"><type>int</type></link> value</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="orc-mmx-emit-loadiw" role="function">
+<title>orc_mmx_emit_loadiw&#160;()</title>
+<indexterm zone="orc-mmx-emit-loadiw"><primary>orc_mmx_emit_loadiw</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+orc_mmx_emit_loadiw (<parameter><link linkend="OrcCompiler"><type>OrcCompiler</type></link> *p</parameter>,
+                     <parameter><link linkend="int"><type>int</type></link> reg</parameter>,
+                     <parameter><link linkend="int"><type>int</type></link> value</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="orc-mmx-emit-loadpb" role="function">
+<title>orc_mmx_emit_loadpb&#160;()</title>
+<indexterm zone="orc-mmx-emit-loadpb"><primary>orc_mmx_emit_loadpb</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+orc_mmx_emit_loadpb (<parameter><link linkend="OrcCompiler"><type>OrcCompiler</type></link> *p</parameter>,
+                     <parameter><link linkend="int"><type>int</type></link> reg</parameter>,
+                     <parameter><link linkend="int"><type>int</type></link> value</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="orc-mmx-emit-loadpl" role="function">
+<title>orc_mmx_emit_loadpl&#160;()</title>
+<indexterm zone="orc-mmx-emit-loadpl"><primary>orc_mmx_emit_loadpl</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+orc_mmx_emit_loadpl (<parameter><link linkend="OrcCompiler"><type>OrcCompiler</type></link> *p</parameter>,
+                     <parameter><link linkend="int"><type>int</type></link> reg</parameter>,
+                     <parameter><link linkend="int"><type>int</type></link> value</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="orc-mmx-emit-loadpq" role="function">
+<title>orc_mmx_emit_loadpq&#160;()</title>
+<indexterm zone="orc-mmx-emit-loadpq"><primary>orc_mmx_emit_loadpq</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+orc_mmx_emit_loadpq (<parameter><link linkend="OrcCompiler"><type>OrcCompiler</type></link> *p</parameter>,
+                     <parameter><link linkend="int"><type>int</type></link> reg</parameter>,
+                     <parameter><link linkend="int"><type>int</type></link> value</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="orc-mmx-emit-loadpw" role="function">
+<title>orc_mmx_emit_loadpw&#160;()</title>
+<indexterm zone="orc-mmx-emit-loadpw"><primary>orc_mmx_emit_loadpw</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+orc_mmx_emit_loadpw (<parameter><link linkend="OrcCompiler"><type>OrcCompiler</type></link> *p</parameter>,
+                     <parameter><link linkend="int"><type>int</type></link> reg</parameter>,
+                     <parameter><link linkend="int"><type>int</type></link> value</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="orc-mmx-emit-pshufw" role="function">
+<title>orc_mmx_emit_pshufw&#160;()</title>
+<indexterm zone="orc-mmx-emit-pshufw"><primary>orc_mmx_emit_pshufw</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+orc_mmx_emit_pshufw (<parameter><link linkend="OrcCompiler"><type>OrcCompiler</type></link> *p</parameter>,
+                     <parameter><link linkend="int"><type>int</type></link> shuf</parameter>,
+                     <parameter><link linkend="int"><type>int</type></link> src</parameter>,
+                     <parameter><link linkend="int"><type>int</type></link> dest</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="orc-mmx-emit-shiftimm" role="function">
+<title>orc_mmx_emit_shiftimm&#160;()</title>
+<indexterm zone="orc-mmx-emit-shiftimm"><primary>orc_mmx_emit_shiftimm</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+orc_mmx_emit_shiftimm (<parameter><link linkend="OrcCompiler"><type>OrcCompiler</type></link> *p</parameter>,
+                       <parameter>const <link linkend="char"><type>char</type></link> *insn_name</parameter>,
+                       <parameter><link linkend="int"><type>int</type></link> code</parameter>,
+                       <parameter><link linkend="int"><type>int</type></link> modrm_code</parameter>,
+                       <parameter><link linkend="int"><type>int</type></link> shift</parameter>,
+                       <parameter><link linkend="int"><type>int</type></link> reg</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="orc-mmx-init" role="function">
+<title>orc_mmx_init&#160;()</title>
+<indexterm zone="orc-mmx-init"><primary>orc_mmx_init</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+orc_mmx_init (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="orc-MMX.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="OrcMMXRegister" role="enum">
+<title>enum OrcMMXRegister</title>
+<indexterm zone="OrcMMXRegister"><primary>OrcMMXRegister</primary></indexterm>
+<refsect3 id="OrcMMXRegister.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="X86-MM0:CAPS">X86_MM0</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="X86-MM1:CAPS">X86_MM1</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="X86-MM2:CAPS">X86_MM2</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="X86-MM3:CAPS">X86_MM3</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="X86-MM4:CAPS">X86_MM4</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="X86-MM5:CAPS">X86_MM5</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="X86-MM6:CAPS">X86_MM6</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="X86-MM7:CAPS">X86_MM7</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="OrcTargetMMXFlags" role="enum">
+<title>enum OrcTargetMMXFlags</title>
+<indexterm zone="OrcTargetMMXFlags"><primary>OrcTargetMMXFlags</primary></indexterm>
+<refsect3 id="OrcTargetMMXFlags.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-TARGET-MMX-MMX:CAPS">ORC_TARGET_MMX_MMX</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-TARGET-MMX-MMXEXT:CAPS">ORC_TARGET_MMX_MMXEXT</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-TARGET-MMX-3DNOW:CAPS">ORC_TARGET_MMX_3DNOW</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-TARGET-MMX-3DNOWEXT:CAPS">ORC_TARGET_MMX_3DNOWEXT</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-TARGET-MMX-SSSE3:CAPS">ORC_TARGET_MMX_SSSE3</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-TARGET-MMX-SSE4-1:CAPS">ORC_TARGET_MMX_SSE4_1</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-TARGET-MMX-SSE4-2:CAPS">ORC_TARGET_MMX_SSE4_2</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-TARGET-MMX-FRAME-POINTER:CAPS">ORC_TARGET_MMX_FRAME_POINTER</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-TARGET-MMX-SHORT-JUMPS:CAPS">ORC_TARGET_MMX_SHORT_JUMPS</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-TARGET-MMX-64BIT:CAPS">ORC_TARGET_MMX_64BIT</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+
+</refsect1>
+
+</refentry>

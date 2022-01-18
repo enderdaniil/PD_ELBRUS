@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="orc-Utility-functions">
+<refmeta>
+<refentrytitle role="top_of_page" id="orc-Utility-functions.top_of_page">Utility functions</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ORC Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>Utility functions</refname>
+<refpurpose>Orc utility functions</refpurpose>
+</refnamediv>
+
+<refsect1 id="orc-Utility-functions.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ORC-ASSERT:CAPS">ORC_ASSERT</link><phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="orc-Utility-functions.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="orc-Utility-functions.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="ORC-ASSERT:CAPS" role="macro">
+<title>ORC_ASSERT()</title>
+<indexterm zone="ORC-ASSERT:CAPS"><primary>ORC_ASSERT</primary></indexterm>
+<programlisting language="C">#define             ORC_ASSERT(test)</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

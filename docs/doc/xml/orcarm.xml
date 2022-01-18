@@ -1,0 +1,228 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="orc-ARM">
+<refmeta>
+<refentrytitle role="top_of_page" id="orc-ARM.top_of_page">ARM</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ORC Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ARM</refname>
+<refpurpose>code generation for ARM</refpurpose>
+</refnamediv>
+
+<refsect1 id="orc-ARM.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="OrcArmCond">OrcArmCond</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="OrcArmDP">OrcArmDP</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="OrcArmRegister">OrcArmRegister</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="orc-ARM.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="orc-ARM.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para />
+</refsect1>
+<refsect1 id="orc-ARM.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="OrcArmCond" role="enum">
+<title>enum OrcArmCond</title>
+<indexterm zone="OrcArmCond"><primary>OrcArmCond</primary></indexterm>
+<refsect3 id="OrcArmCond.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-COND-EQ:CAPS">ORC_ARM_COND_EQ</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-COND-NE:CAPS">ORC_ARM_COND_NE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-COND-CS:CAPS">ORC_ARM_COND_CS</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-COND-CC:CAPS">ORC_ARM_COND_CC</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-COND-MI:CAPS">ORC_ARM_COND_MI</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-COND-PL:CAPS">ORC_ARM_COND_PL</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-COND-VS:CAPS">ORC_ARM_COND_VS</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-COND-VC:CAPS">ORC_ARM_COND_VC</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-COND-HI:CAPS">ORC_ARM_COND_HI</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-COND-LS:CAPS">ORC_ARM_COND_LS</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-COND-GE:CAPS">ORC_ARM_COND_GE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-COND-LT:CAPS">ORC_ARM_COND_LT</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-COND-GT:CAPS">ORC_ARM_COND_GT</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-COND-LE:CAPS">ORC_ARM_COND_LE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-COND-AL:CAPS">ORC_ARM_COND_AL</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="OrcArmDP" role="enum">
+<title>enum OrcArmDP</title>
+<indexterm zone="OrcArmDP"><primary>OrcArmDP</primary></indexterm>
+<refsect3 id="OrcArmDP.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-DP-AND:CAPS">ORC_ARM_DP_AND</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-DP-EOR:CAPS">ORC_ARM_DP_EOR</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-DP-SUB:CAPS">ORC_ARM_DP_SUB</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-DP-RSB:CAPS">ORC_ARM_DP_RSB</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-DP-ADD:CAPS">ORC_ARM_DP_ADD</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-DP-ADC:CAPS">ORC_ARM_DP_ADC</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-DP-SBC:CAPS">ORC_ARM_DP_SBC</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-DP-RSC:CAPS">ORC_ARM_DP_RSC</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-DP-TST:CAPS">ORC_ARM_DP_TST</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-DP-TEQ:CAPS">ORC_ARM_DP_TEQ</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-DP-CMP:CAPS">ORC_ARM_DP_CMP</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-DP-CMN:CAPS">ORC_ARM_DP_CMN</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-DP-ORR:CAPS">ORC_ARM_DP_ORR</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-DP-MOV:CAPS">ORC_ARM_DP_MOV</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-DP-BIC:CAPS">ORC_ARM_DP_BIC</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-DP-MVN:CAPS">ORC_ARM_DP_MVN</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="OrcArmRegister" role="enum">
+<title>enum OrcArmRegister</title>
+<indexterm zone="OrcArmRegister"><primary>OrcArmRegister</primary></indexterm>
+<refsect3 id="OrcArmRegister.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-A1:CAPS">ORC_ARM_A1</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-A2:CAPS">ORC_ARM_A2</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-A3:CAPS">ORC_ARM_A3</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-A4:CAPS">ORC_ARM_A4</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-V1:CAPS">ORC_ARM_V1</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-V2:CAPS">ORC_ARM_V2</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-V3:CAPS">ORC_ARM_V3</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-V4:CAPS">ORC_ARM_V4</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-V5:CAPS">ORC_ARM_V5</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-V6:CAPS">ORC_ARM_V6</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-V7:CAPS">ORC_ARM_V7</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-V8:CAPS">ORC_ARM_V8</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-IP:CAPS">ORC_ARM_IP</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-SP:CAPS">ORC_ARM_SP</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-LR:CAPS">ORC_ARM_LR</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-ARM-PC:CAPS">ORC_ARM_PC</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+
+</refsect1>
+
+</refentry>

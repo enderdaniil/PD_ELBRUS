@@ -1,0 +1,413 @@
+diff --git a/orc/orcprogram-mmx.c b/orc/orcprogram-mmx.c
+index d3a03e9..95d7ffa 100644
+--- a/orc/orcprogram-mmx.c
++++ b/orc/orcprogram-mmx.c
+@@ -377,7 +377,7 @@ orc_mmx_load_constant (OrcCompiler *compiler, int reg, int size, orc_uint64 valu
+     value |= (value << 16);
+   }
+ 
+-  ORC_ASM_CODE(compiler, "# loading constant %d 0x%08x\n", (int)value, (int)value);
++  orc_x86_emit_comment (compiler, "# loading constant %d 0x%08x\n", (int)value, (int)value);
+   if (value == 0) {
+     orc_mmx_emit_pxor(compiler, reg, reg);
+     return;
+@@ -443,7 +443,7 @@ mmx_load_constant_long (OrcCompiler *compiler, int reg,
+ 
+   /* FIXME this is slower than it could be */
+ 
+-  ORC_ASM_CODE(compiler, "# loading constant %08x %08x %08x %08x\n",
++  orc_x86_emit_comment (compiler, "# loading constant %08x %08x %08x %08x\n",
+       constant->full_value[0], constant->full_value[1],
+       constant->full_value[2], constant->full_value[3]);
+ 
+@@ -484,7 +484,7 @@ mmx_load_constants_outer (OrcCompiler *compiler)
+     }
+   }
+ 
+-  orc_compiler_emit_invariants (compiler);
++  orc_compiler_emit_invariants_x86_version (compiler);
+ 
+   /* FIXME move to a better place */
+   for(i=0;i<compiler->n_constants;i++){
+@@ -848,7 +848,7 @@ orc_compiler_mmx_assemble (OrcCompiler *compiler)
+ 
+     save_loop_shift = compiler->loop_shift;
+     while (n_left >= (1<<compiler->loop_shift)) {
+-      ORC_ASM_CODE(compiler, "# LOOP SHIFT %d\n", compiler->loop_shift);
++      orc_x86_emit_comment (compiler, "\n# LOOP SHIFT %d\n", compiler->loop_shift);
+       orc_mmx_emit_loop (compiler, compiler->offset, 0);
+ 
+       n_left -= 1<<compiler->loop_shift;
+@@ -857,7 +857,7 @@ orc_compiler_mmx_assemble (OrcCompiler *compiler)
+     for(loop_shift = compiler->loop_shift-1; loop_shift>=0; loop_shift--) {
+       if (n_left >= (1<<loop_shift)) {
+         compiler->loop_shift = loop_shift;
+-        ORC_ASM_CODE(compiler, "# LOOP SHIFT %d\n", loop_shift);
++        orc_x86_emit_comment (compiler, "\n# LOOP SHIFT %d\n", loop_shift);
+         orc_mmx_emit_loop (compiler, compiler->offset, 0);
+         n_left -= 1<<loop_shift;
+         compiler->offset += 1<<loop_shift;
+@@ -887,7 +887,7 @@ orc_compiler_mmx_assemble (OrcCompiler *compiler)
+ 
+       for (l=0;l<save_loop_shift;l++){
+         compiler->loop_shift = l;
+-        ORC_ASM_CODE(compiler, "# LOOP SHIFT %d\n", compiler->loop_shift);
++        orc_x86_emit_comment (compiler, "\n# LOOP SHIFT %d\n", compiler->loop_shift);
+ 
+         orc_x86_emit_test_imm_memoffset (compiler, 4, 1<<compiler->loop_shift,
+             (int)ORC_STRUCT_OFFSET(OrcExecutor,counter1), compiler->exec_reg);
+@@ -912,7 +912,7 @@ orc_compiler_mmx_assemble (OrcCompiler *compiler)
+           compiler->loop_counter);
+     }
+ 
+-    ORC_ASM_CODE(compiler, "# LOOP SHIFT %d\n", compiler->loop_shift);
++    orc_x86_emit_comment (compiler, "\n# LOOP SHIFT %d\n", compiler->loop_shift);
+     orc_x86_emit_align (compiler, 4);
+     orc_x86_emit_label (compiler, LABEL_INNER_LOOP_START);
+     ui_max = 1<<compiler->unroll_shift;
+@@ -941,7 +941,7 @@ orc_compiler_mmx_assemble (OrcCompiler *compiler)
+ 
+       for(l=save_loop_shift - 1; l >= 0; l--) {
+         compiler->loop_shift = l;
+-        ORC_ASM_CODE(compiler, "# LOOP SHIFT %d\n", compiler->loop_shift);
++        orc_x86_emit_comment (compiler, "\n# LOOP SHIFT %d\n", compiler->loop_shift);
+ 
+         orc_x86_emit_test_imm_memoffset (compiler, 4, 1<<compiler->loop_shift,
+             (int)ORC_STRUCT_OFFSET(OrcExecutor,counter3), compiler->exec_reg);
+@@ -998,7 +998,7 @@ orc_mmx_emit_loop (OrcCompiler *compiler, int offset, int update)
+ 
+     if (insn->flags & ORC_INSN_FLAG_INVARIANT) continue;
+ 
+-    ORC_ASM_CODE(compiler,"# %d: %s\n", j, insn->opcode->name);
++    orc_x86_emit_comment (compiler,"# %d: %s\n", j, insn->opcode->name);
+ 
+     compiler->min_temp_reg = ORC_VEC_REG_BASE;
+ 
+diff --git a/orc/orcprogram-sse.c b/orc/orcprogram-sse.c
+index 412891a..bb23887 100644
+--- a/orc/orcprogram-sse.c
++++ b/orc/orcprogram-sse.c
+@@ -377,7 +377,7 @@ orc_sse_load_constant (OrcCompiler *compiler, int reg, int size, orc_uint64 valu
+     value |= (value << 16);
+   }
+ 
+-  ORC_ASM_CODE(compiler, "# loading constant %d 0x%08x\n", (int)value, (int)value);
++  orc_x86_emit_comment (compiler, "# loading constant %d 0x%08x\n", (int)value, (int)value);
+   if (value == 0) {
+     orc_sse_emit_pxor(compiler, reg, reg);
+     return;
+@@ -443,7 +443,7 @@ sse_load_constant_long (OrcCompiler *compiler, int reg,
+ 
+   /* FIXME this is slower than it could be */
+ 
+-  ORC_ASM_CODE(compiler, "# loading constant %08x %08x %08x %08x\n",
++  orc_x86_emit_comment (compiler, "# loading constant %08x %08x %08x %08x\n",
+       constant->full_value[0], constant->full_value[1],
+       constant->full_value[2], constant->full_value[3]);
+ 
+@@ -484,7 +484,7 @@ sse_load_constants_outer (OrcCompiler *compiler)
+     }
+   }
+ 
+-  orc_compiler_emit_invariants (compiler);
++  orc_compiler_emit_invariants_x86_version (compiler);
+ 
+   /* FIXME move to a better place */
+   for(i=0;i<compiler->n_constants;i++){
+@@ -893,7 +893,7 @@ orc_compiler_sse_assemble (OrcCompiler *compiler)
+ 
+     save_loop_shift = compiler->loop_shift;
+     while (n_left >= (1<<compiler->loop_shift)) {
+-      ORC_ASM_CODE(compiler, "# LOOP SHIFT %d\n", compiler->loop_shift);
++      orc_x86_emit_comment (compiler, "\n# LOOP SHIFT %d\n", compiler->loop_shift);
+       orc_sse_emit_loop (compiler, compiler->offset, 0);
+ 
+       n_left -= 1<<compiler->loop_shift;
+@@ -902,7 +902,7 @@ orc_compiler_sse_assemble (OrcCompiler *compiler)
+     for(loop_shift = compiler->loop_shift-1; loop_shift>=0; loop_shift--) {
+       if (n_left >= (1<<loop_shift)) {
+         compiler->loop_shift = loop_shift;
+-        ORC_ASM_CODE(compiler, "# LOOP SHIFT %d\n", loop_shift);
++        orc_x86_emit_comment (compiler, "\n# LOOP SHIFT %d\n", loop_shift);
+         orc_sse_emit_loop (compiler, compiler->offset, 0);
+         n_left -= 1<<loop_shift;
+         compiler->offset += 1<<loop_shift;
+@@ -932,7 +932,7 @@ orc_compiler_sse_assemble (OrcCompiler *compiler)
+ 
+       for (l=0;l<save_loop_shift;l++){
+         compiler->loop_shift = l;
+-        ORC_ASM_CODE(compiler, "# LOOP SHIFT %d\n", compiler->loop_shift);
++        orc_x86_emit_comment (compiler, "\n# LOOP SHIFT %d\n", compiler->loop_shift);
+ 
+         orc_x86_emit_test_imm_memoffset (compiler, 4, 1<<compiler->loop_shift,
+             (int)ORC_STRUCT_OFFSET(OrcExecutor,counter1), compiler->exec_reg);
+@@ -957,7 +957,7 @@ orc_compiler_sse_assemble (OrcCompiler *compiler)
+           compiler->loop_counter);
+     }
+ 
+-    ORC_ASM_CODE(compiler, "# LOOP SHIFT %d\n", compiler->loop_shift);
++    orc_x86_emit_comment (compiler, "\n# LOOP SHIFT %d\n", compiler->loop_shift);
+     orc_x86_emit_align (compiler, 4);
+     orc_x86_emit_label (compiler, LABEL_INNER_LOOP_START);
+     ui_max = 1<<compiler->unroll_shift;
+@@ -986,7 +986,7 @@ orc_compiler_sse_assemble (OrcCompiler *compiler)
+ 
+       for(l=save_loop_shift - 1; l >= 0; l--) {
+         compiler->loop_shift = l;
+-        ORC_ASM_CODE(compiler, "# LOOP SHIFT %d\n", compiler->loop_shift);
++        orc_x86_emit_comment (compiler, "\n# LOOP SHIFT %d\n", compiler->loop_shift);
+ 
+         orc_x86_emit_test_imm_memoffset (compiler, 4, 1<<compiler->loop_shift,
+             (int)ORC_STRUCT_OFFSET(OrcExecutor,counter3), compiler->exec_reg);
+@@ -1046,7 +1046,7 @@ orc_sse_emit_loop (OrcCompiler *compiler, int offset, int update)
+ 
+     if (insn->flags & ORC_INSN_FLAG_INVARIANT) continue;
+ 
+-    ORC_ASM_CODE(compiler,"# %d: %s\n", j, insn->opcode->name);
++    orc_x86_emit_comment (compiler,"# %d: %s\n", j, insn->opcode->name);
+ 
+     compiler->min_temp_reg = ORC_VEC_REG_BASE;
+ 
+diff --git a/orc/orcx86.c b/orc/orcx86.c
+index d4cc086..ad12a8e 100644
+--- a/orc/orcx86.c
++++ b/orc/orcx86.c
+@@ -585,3 +585,40 @@ orc_x86_assemble_copy (OrcCompiler *compiler)
+   orc_x86_do_fixups (compiler);
+ }
+ 
++
++
++void
++orc_compiler_emit_invariants_x86_version (OrcCompiler *compiler)
++{
++  int j;
++  OrcInstruction *insn;
++  OrcStaticOpcode *opcode;
++  OrcRule *rule;
++
++  for(j=0;j<compiler->n_insns;j++){
++    insn = compiler->insns + j;
++    opcode = insn->opcode;
++
++    if (!(insn->flags & ORC_INSN_FLAG_INVARIANT)) continue;
++
++/* TODO: use ORC_ASM_CODE() for non-x86 archs */
++/* FIXIME: implicit declaration of function 'orc_x86_emit_comment' */
++    orc_x86_emit_comment (compiler,"# %d: %s\n", j, opcode->name);
++
++    compiler->insn_shift = compiler->loop_shift;
++    if (insn->flags & ORC_INSTRUCTION_FLAG_X2) {
++      compiler->insn_shift += 1;
++    }
++    if (insn->flags & ORC_INSTRUCTION_FLAG_X4) {
++      compiler->insn_shift += 2;
++    }
++
++    rule = insn->rule;
++    if (rule && rule->emit) {
++      rule->emit (compiler, rule->emit_user, insn);
++    } else {
++      orc_compiler_error (compiler, "no code generation rule for %s",
++          opcode->name);
++    }
++  }
++}
+diff --git a/orc/orcx86.h b/orc/orcx86.h
+index 7f50b67..6755864 100644
+--- a/orc/orcx86.h
++++ b/orc/orcx86.h
+@@ -190,6 +190,9 @@ ORC_API void orc_x86_emit_cpuinsn_label (OrcCompiler *p, int index, int label);
+ ORC_API void orc_x86_emit_cpuinsn_none (OrcCompiler *p, int index);
+ ORC_API void orc_x86_emit_cpuinsn_align (OrcCompiler *p, int index, int align_shift);
+ 
++ORC_API void orc_x86_emit_comment (OrcCompiler *p, const char *fmt, ...) ORC_GNU_PRINTF(2,3);
++void orc_compiler_emit_invariants_x86_version (OrcCompiler *compiler);
++
+ #endif
+ 
+ ORC_END_DECLS
+diff --git a/orc/orcx86insn.c b/orc/orcx86insn.c
+index 9b094ac..b3bebcb 100644
+--- a/orc/orcx86insn.c
++++ b/orc/orcx86insn.c
+@@ -307,6 +307,10 @@ orc_x86_insn_output_asm (OrcCompiler *p, OrcX86Insn *xinsn)
+   char op2_str[40] = { 0 };
+   int is_sse;
+ 
++  if (xinsn->comment) {
++    ORC_ASM_CODE(p,"%s", xinsn->comment);
++    free(xinsn->comment);
++  }
+   if (xinsn->opcode->type == ORC_X86_INSN_TYPE_ALIGN) {
+     if (xinsn->size > 0) ORC_ASM_CODE(p,".p2align %d\n", xinsn->size);
+     return;
+@@ -573,6 +577,11 @@ orc_x86_insn_output_opcode (OrcCompiler *p, OrcX86Insn *xinsn)
+     is_sse = TRUE;
+   }
+ 
++  if (xinsn->opcode == NULL) {
++      ORC_ERROR("xinsn->opcode == NULL???");
++      return ;
++  }
++
+   switch (xinsn->opcode->type) {
+     case ORC_X86_INSN_TYPE_IMM8_MMX_SHIFT:
+       output_opcode (p, xinsn->opcode, 4, xinsn->dest, 0, is_sse);
+@@ -913,12 +922,16 @@ orc_x86_calculate_offsets (OrcCompiler *p)
+   }
+ }
+ 
++static char *comments_buf = NULL;
++
+ void
+ orc_x86_output_insns (OrcCompiler *p)
+ {
+   OrcX86Insn *xinsn;
+   int i;
+ 
++  ORC_ASSERT(comments_buf == NULL); /* No comments after last instuction */
++
+   for(i=0;i<p->n_output_insns;i++){
+     xinsn = ((OrcX86Insn *)p->output_insns) + i;
+ 
+@@ -942,6 +955,7 @@ orc_x86_emit_cpuinsn_size (OrcCompiler *p, int index, int size, int src, int des
+   xinsn->dest = dest;
+   xinsn->type = ORC_X86_RM_REG;
+   xinsn->size = size;
++  xinsn->comment = comments_buf; comments_buf = NULL;
+ }
+ 
+ void
+@@ -957,6 +971,7 @@ orc_x86_emit_cpuinsn_imm (OrcCompiler *p, int index, int imm, int src, int dest)
+   xinsn->dest = dest;
+   xinsn->type = ORC_X86_RM_REG;
+   xinsn->size = 4;
++  xinsn->comment = comments_buf; comments_buf = NULL;
+ }
+ 
+ void
+@@ -974,6 +989,7 @@ orc_x86_emit_cpuinsn_load_memoffset (OrcCompiler *p, int index, int size,
+   xinsn->type = ORC_X86_RM_MEMOFFSET;
+   xinsn->offset = offset;
+   xinsn->size = size;
++  xinsn->comment = comments_buf; comments_buf = NULL;
+ }
+ 
+ void
+@@ -991,6 +1007,7 @@ orc_x86_emit_cpuinsn_store_memoffset (OrcCompiler *p, int index, int size,
+   xinsn->type = ORC_X86_RM_MEMOFFSET;
+   xinsn->offset = offset;
+   xinsn->size = size;
++  xinsn->comment = comments_buf; comments_buf = NULL;
+ }
+ 
+ void
+@@ -1010,6 +1027,7 @@ orc_x86_emit_cpuinsn_load_memindex (OrcCompiler *p, int index, int size,
+   xinsn->index_reg = src_index;
+   xinsn->shift = shift;
+   xinsn->size = size;
++  xinsn->comment = comments_buf; comments_buf = NULL;
+ }
+ 
+ void
+@@ -1026,6 +1044,7 @@ orc_x86_emit_cpuinsn_imm_reg (OrcCompiler *p, int index, int size, int imm,
+   xinsn->dest = dest;
+   xinsn->type = ORC_X86_RM_REG;
+   xinsn->size = size;
++  xinsn->comment = comments_buf; comments_buf = NULL;
+ }
+ 
+ void
+@@ -1043,6 +1062,7 @@ orc_x86_emit_cpuinsn_imm_memoffset (OrcCompiler *p, int index, int size,
+   xinsn->type = ORC_X86_RM_MEMOFFSET;
+   xinsn->offset = offset;
+   xinsn->size = size;
++  xinsn->comment = comments_buf; comments_buf = NULL;
+ }
+ 
+ void
+@@ -1073,6 +1093,7 @@ orc_x86_emit_cpuinsn_reg_memoffset_s (OrcCompiler *p, int index, int size,
+   xinsn->type = ORC_X86_RM_MEMOFFSET;
+   xinsn->offset = offset;
+   xinsn->size = size;
++  xinsn->comment = comments_buf; comments_buf = NULL;
+ }
+ 
+ void
+@@ -1089,6 +1110,7 @@ orc_x86_emit_cpuinsn_memoffset_reg (OrcCompiler *p, int index, int size,
+   xinsn->type = ORC_X86_RM_MEMOFFSET;
+   xinsn->offset = offset;
+   xinsn->size = size;
++  xinsn->comment = comments_buf; comments_buf = NULL;
+ }
+ 
+ void
+@@ -1101,6 +1123,7 @@ orc_x86_emit_cpuinsn_branch (OrcCompiler *p, int index, int label)
+   xinsn->opcode = opcode;
+   xinsn->label = label;
+   xinsn->size = 1;
++  xinsn->comment = comments_buf; comments_buf = NULL;
+ }
+ 
+ void
+@@ -1112,6 +1135,7 @@ orc_x86_emit_cpuinsn_align (OrcCompiler *p, int index, int align_shift)
+   xinsn->opcode_index = index;
+   xinsn->opcode = opcode;
+   xinsn->size = align_shift;
++  xinsn->comment = comments_buf; comments_buf = NULL;
+ }
+ 
+ void
+@@ -1124,6 +1148,7 @@ orc_x86_emit_cpuinsn_label (OrcCompiler *p, int index, int label)
+   xinsn->opcode = opcode;
+   xinsn->label = label;
+   x86_add_label2 (p, p->n_output_insns - 1, label);
++  xinsn->comment = comments_buf; comments_buf = NULL;
+ }
+ 
+ void
+@@ -1136,6 +1161,7 @@ orc_x86_emit_cpuinsn_none (OrcCompiler *p, int index)
+   xinsn->opcode_index = index;
+   xinsn->opcode = opcode;
+   xinsn->size = size;
++  xinsn->comment = comments_buf; comments_buf = NULL;
+ }
+ 
+ void
+@@ -1152,5 +1178,23 @@ orc_x86_emit_cpuinsn_memoffset (OrcCompiler *p, int index, int size,
+   xinsn->type = ORC_X86_RM_MEMOFFSET;
+   xinsn->offset = offset;
+   xinsn->size = size;
++  xinsn->comment = comments_buf; comments_buf = NULL;
+ }
+ 
++
++void
++orc_x86_emit_comment (OrcCompiler *p, const char *fmt, ...)
++{
++  char tmp[200];
++  va_list varargs;
++  int n, prev_comment_n;
++
++  va_start (varargs, fmt);
++  vsnprintf(tmp, 200 - 1, fmt, varargs);
++  va_end (varargs);
++
++  n = strlen (tmp);
++  prev_comment_n = (comments_buf == NULL)? 0 : strlen(comments_buf);
++  comments_buf = realloc (comments_buf, prev_comment_n + n + 1);
++  memcpy (comments_buf + prev_comment_n, tmp, n + 1);
++}
+diff --git a/orc/orcx86insn.h b/orc/orcx86insn.h
+index 5bb7935..721027b 100644
+--- a/orc/orcx86insn.h
++++ b/orc/orcx86insn.h
+@@ -302,6 +302,7 @@ struct _OrcX86Insn {
+   int index_reg;
+   int shift;
+   int code_offset;
++  char *comment;
+ };
+ 
+ ORC_API OrcX86Insn * orc_x86_get_output_insn (OrcCompiler *p);

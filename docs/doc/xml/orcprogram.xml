@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="orc-OrcProgram">
+<refmeta>
+<refentrytitle role="top_of_page" id="orc-OrcProgram.top_of_page">OrcProgram</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ORC Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>OrcProgram</refname>
+<refpurpose>Creating and manipulating Orc programs</refpurpose>
+</refnamediv>
+
+<refsect1 id="orc-OrcProgram.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ORC-PROGRAM-ERROR:CAPS">ORC_PROGRAM_ERROR</link><phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="orc-OrcProgram.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="OrcProgram">OrcProgram</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ORC-N-CONSTANTS:CAPS">ORC_N_CONSTANTS</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ORC-N-RULE-SETS:CAPS">ORC_N_RULE_SETS</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ORC-N-TARGETS:CAPS">ORC_N_TARGETS</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="orc-OrcProgram.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="orc-OrcProgram.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="ORC-PROGRAM-ERROR:CAPS" role="macro">
+<title>ORC_PROGRAM_ERROR()</title>
+<indexterm zone="ORC-PROGRAM-ERROR:CAPS"><primary>ORC_PROGRAM_ERROR</primary></indexterm>
+<programlisting language="C">#define             ORC_PROGRAM_ERROR(program, ...)</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="orc-OrcProgram.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="OrcProgram" role="struct">
+<title>struct OrcProgram</title>
+<indexterm zone="OrcProgram"><primary>OrcProgram</primary></indexterm>
+<programlisting language="C">struct OrcProgram {
+};
+</programlisting>
+<para>The OrcProgram structure has no public members</para>
+</refsect2>
+<refsect2 id="ORC-N-CONSTANTS:CAPS" role="macro">
+<title>ORC_N_CONSTANTS</title>
+<indexterm zone="ORC-N-CONSTANTS:CAPS"><primary>ORC_N_CONSTANTS</primary></indexterm>
+<programlisting language="C">#define ORC_N_CONSTANTS 20
+</programlisting>
+</refsect2>
+<refsect2 id="ORC-N-RULE-SETS:CAPS" role="macro">
+<title>ORC_N_RULE_SETS</title>
+<indexterm zone="ORC-N-RULE-SETS:CAPS"><primary>ORC_N_RULE_SETS</primary></indexterm>
+<programlisting language="C">#define ORC_N_RULE_SETS 10
+</programlisting>
+</refsect2>
+<refsect2 id="ORC-N-TARGETS:CAPS" role="macro">
+<title>ORC_N_TARGETS</title>
+<indexterm zone="ORC-N-TARGETS:CAPS"><primary>ORC_N_TARGETS</primary></indexterm>
+<programlisting language="C">#define ORC_N_TARGETS 10
+</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

@@ -1,0 +1,192 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="orc-SSE">
+<refmeta>
+<refentrytitle role="top_of_page" id="orc-SSE.top_of_page">SSE</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ORC Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>SSE</refname>
+<refpurpose>code generation for SSE</refpurpose>
+</refnamediv>
+
+<refsect1 id="orc-SSE.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ORC-SSE-SHUF:CAPS">ORC_SSE_SHUF</link><phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="orc-sse-emit-pshufd">orc_sse_emit_pshufd</link><phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="orc-sse-emit-pshuflw">orc_sse_emit_pshuflw</link><phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="orc-sse-init">orc_sse_init</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="orc-SSE.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="OrcSSERegister">OrcSSERegister</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="OrcTargetSSEFlags">OrcTargetSSEFlags</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="orc-SSE.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="orc-SSE.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="ORC-SSE-SHUF:CAPS" role="macro">
+<title>ORC_SSE_SHUF()</title>
+<indexterm zone="ORC-SSE-SHUF:CAPS"><primary>ORC_SSE_SHUF</primary></indexterm>
+<programlisting language="C">#define ORC_SSE_SHUF(a,b,c,d) ((((a)&amp;3)&lt;&lt;6)|(((b)&amp;3)&lt;&lt;4)|(((c)&amp;3)&lt;&lt;2)|(((d)&amp;3)&lt;&lt;0))
+</programlisting>
+</refsect2>
+<refsect2 id="orc-sse-emit-pshufd" role="macro">
+<title>orc_sse_emit_pshufd()</title>
+<indexterm zone="orc-sse-emit-pshufd"><primary>orc_sse_emit_pshufd</primary></indexterm>
+<programlisting language="C">#define orc_sse_emit_pshufd(p,imm,a,b) orc_x86_emit_cpuinsn_imm(p, ORC_X86_pshufd, imm, a, b)
+</programlisting>
+</refsect2>
+<refsect2 id="orc-sse-emit-pshuflw" role="macro">
+<title>orc_sse_emit_pshuflw()</title>
+<indexterm zone="orc-sse-emit-pshuflw"><primary>orc_sse_emit_pshuflw</primary></indexterm>
+<programlisting language="C">#define orc_sse_emit_pshuflw(p,imm,a,b) orc_x86_emit_cpuinsn_imm(p, ORC_X86_pshuflw, imm, a, b)
+</programlisting>
+</refsect2>
+<refsect2 id="orc-sse-init" role="function">
+<title>orc_sse_init&#160;()</title>
+<indexterm zone="orc-sse-init"><primary>orc_sse_init</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+orc_sse_init (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="orc-SSE.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="OrcSSERegister" role="enum">
+<title>enum OrcSSERegister</title>
+<indexterm zone="OrcSSERegister"><primary>OrcSSERegister</primary></indexterm>
+<refsect3 id="OrcSSERegister.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="X86-XMM0:CAPS">X86_XMM0</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="X86-XMM1:CAPS">X86_XMM1</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="X86-XMM2:CAPS">X86_XMM2</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="X86-XMM3:CAPS">X86_XMM3</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="X86-XMM4:CAPS">X86_XMM4</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="X86-XMM5:CAPS">X86_XMM5</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="X86-XMM6:CAPS">X86_XMM6</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="X86-XMM7:CAPS">X86_XMM7</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="X86-XMM8:CAPS">X86_XMM8</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="X86-XMM9:CAPS">X86_XMM9</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="X86-XMM10:CAPS">X86_XMM10</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="X86-XMM11:CAPS">X86_XMM11</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="X86-XMM12:CAPS">X86_XMM12</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="X86-XMM13:CAPS">X86_XMM13</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="X86-XMM14:CAPS">X86_XMM14</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="X86-XMM15:CAPS">X86_XMM15</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="OrcTargetSSEFlags" role="enum">
+<title>enum OrcTargetSSEFlags</title>
+<indexterm zone="OrcTargetSSEFlags"><primary>OrcTargetSSEFlags</primary></indexterm>
+<refsect3 id="OrcTargetSSEFlags.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-TARGET-SSE-SSE2:CAPS">ORC_TARGET_SSE_SSE2</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-TARGET-SSE-SSE3:CAPS">ORC_TARGET_SSE_SSE3</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-TARGET-SSE-SSSE3:CAPS">ORC_TARGET_SSE_SSSE3</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-TARGET-SSE-SSE4-1:CAPS">ORC_TARGET_SSE_SSE4_1</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-TARGET-SSE-SSE4-2:CAPS">ORC_TARGET_SSE_SSE4_2</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-TARGET-SSE-SSE4A:CAPS">ORC_TARGET_SSE_SSE4A</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-TARGET-SSE-SSE5:CAPS">ORC_TARGET_SSE_SSE5</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-TARGET-SSE-FRAME-POINTER:CAPS">ORC_TARGET_SSE_FRAME_POINTER</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-TARGET-SSE-SHORT-JUMPS:CAPS">ORC_TARGET_SSE_SHORT_JUMPS</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-TARGET-SSE-64BIT:CAPS">ORC_TARGET_SSE_64BIT</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+
+</refsect1>
+
+</refentry>

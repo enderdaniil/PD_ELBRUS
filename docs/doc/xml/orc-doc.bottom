@@ -1,0 +1,14 @@
+    <xi:include href="xml/orc.xml"/>
+    <xi:include href="xml/orcprogram.xml"/>
+    <xi:include href="xml/orcutils.xml"/>
+    <xi:include href="xml/misc.xml"/>
+    <xi:include href="xml/orcdebug.xml"/>
+    <xi:include href="xml/orccompiler.xml"/>
+    <xi:include href="xml/orcopcode.xml"/>
+    <xi:include href="xml/orcexecutor.xml"/>
+    <xi:include href="xml/orcrule.xml"/>
+    <xi:include href="xml/orcx86.xml"/>
+    <xi:include href="xml/orcsse.xml"/>
+    <xi:include href="xml/orcmmx.xml"/>
+    <xi:include href="xml/orcarm.xml"/>
+    <xi:include href="xml/orcpowerpc.xml"/>

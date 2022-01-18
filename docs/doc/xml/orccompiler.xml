@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="orc-OrcCompiler">
+<refmeta>
+<refentrytitle role="top_of_page" id="orc-OrcCompiler.top_of_page">OrcCompiler</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ORC Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>OrcCompiler</refname>
+<refpurpose>Compile Orc programs</refpurpose>
+</refnamediv>
+
+<refsect1 id="orc-OrcCompiler.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ORC-COMPILER-ERROR:CAPS">ORC_COMPILER_ERROR</link><phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ORC-COMPILE-RESULT-IS-FATAL:CAPS">ORC_COMPILE_RESULT_IS_FATAL</link><phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ORC-COMPILE-RESULT-IS-SUCCESSFUL:CAPS">ORC_COMPILE_RESULT_IS_SUCCESSFUL</link><phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ORC-ASM-CODE:CAPS">ORC_ASM_CODE</link><phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="orc-OrcCompiler.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="OrcCompileResult">OrcCompileResult</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="OrcCompiler">OrcCompiler</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="OrcConstant">OrcConstant</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ORC-ENABLE-ASM-CODE:CAPS">ORC_ENABLE_ASM_CODE</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="orc-OrcCompiler.description" role="desc">
+<title role="desc.title">Description</title>
+<para>OrcCompiler is the object used to convert Orc programs contained
+in an OrcProgram object into assembly code and object code.</para>
+<para>The OrcCompileResult enum is used to indicate whether or not
+a compilation attempt was successful or not.  The macros
+<link linkend="ORC-COMPILE-RESULT-IS-SUCCESSFUL:CAPS"><function>ORC_COMPILE_RESULT_IS_SUCCESSFUL()</function></link> and <link linkend="ORC-COMPILE-RESULT-IS-FATAL:CAPS"><function>ORC_COMPILE_RESULT_IS_FATAL()</function></link>
+should be used instead of checking values directly.</para>
+<para>When a program is compiled, the compiler calls the functions
+contained in various OrcRule structures.  These functions generate
+assembly and object instructions by calling <link linkend="ORC-ASM-CODE:CAPS"><function>ORC_ASM_CODE()</function></link>
+or functions that use <link linkend="ORC-ASM-CODE:CAPS"><function>ORC_ASM_CODE()</function></link> internally.</para>
+
+</refsect1>
+<refsect1 id="orc-OrcCompiler.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="ORC-COMPILER-ERROR:CAPS" role="macro">
+<title>ORC_COMPILER_ERROR()</title>
+<indexterm zone="ORC-COMPILER-ERROR:CAPS"><primary>ORC_COMPILER_ERROR</primary></indexterm>
+<programlisting language="C">#define             ORC_COMPILER_ERROR(compiler, ...)</programlisting>
+</refsect2>
+<refsect2 id="ORC-COMPILE-RESULT-IS-FATAL:CAPS" role="macro">
+<title>ORC_COMPILE_RESULT_IS_FATAL()</title>
+<indexterm zone="ORC-COMPILE-RESULT-IS-FATAL:CAPS"><primary>ORC_COMPILE_RESULT_IS_FATAL</primary></indexterm>
+<programlisting language="C">#define ORC_COMPILE_RESULT_IS_FATAL(x) ((x) &gt;= 0x200)
+</programlisting>
+</refsect2>
+<refsect2 id="ORC-COMPILE-RESULT-IS-SUCCESSFUL:CAPS" role="macro">
+<title>ORC_COMPILE_RESULT_IS_SUCCESSFUL()</title>
+<indexterm zone="ORC-COMPILE-RESULT-IS-SUCCESSFUL:CAPS"><primary>ORC_COMPILE_RESULT_IS_SUCCESSFUL</primary></indexterm>
+<programlisting language="C">#define ORC_COMPILE_RESULT_IS_SUCCESSFUL(x) ((x) &lt; 0x100)
+</programlisting>
+</refsect2>
+<refsect2 id="ORC-ASM-CODE:CAPS" role="macro">
+<title>ORC_ASM_CODE()</title>
+<indexterm zone="ORC-ASM-CODE:CAPS"><primary>ORC_ASM_CODE</primary></indexterm>
+<programlisting language="C">#define ORC_ASM_CODE(compiler,...) orc_compiler_append_code(compiler, __VA_ARGS__)
+</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="orc-OrcCompiler.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="OrcCompileResult" role="enum">
+<title>enum OrcCompileResult</title>
+<indexterm zone="OrcCompileResult"><primary>OrcCompileResult</primary></indexterm>
+<refsect3 id="OrcCompileResult.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-COMPILE-RESULT-OK:CAPS">ORC_COMPILE_RESULT_OK</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-COMPILE-RESULT-UNKNOWN-COMPILE:CAPS">ORC_COMPILE_RESULT_UNKNOWN_COMPILE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-COMPILE-RESULT-MISSING-RULE:CAPS">ORC_COMPILE_RESULT_MISSING_RULE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-COMPILE-RESULT-UNKNOWN-PARSE:CAPS">ORC_COMPILE_RESULT_UNKNOWN_PARSE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-COMPILE-RESULT-PARSE:CAPS">ORC_COMPILE_RESULT_PARSE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ORC-COMPILE-RESULT-VARIABLE:CAPS">ORC_COMPILE_RESULT_VARIABLE</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="OrcCompiler" role="struct">
+<title>struct OrcCompiler</title>
+<indexterm zone="OrcCompiler"><primary>OrcCompiler</primary></indexterm>
+<programlisting language="C">struct OrcCompiler {
+};
+</programlisting>
+<para>The OrcCompiler structure has no public members</para>
+</refsect2>
+<refsect2 id="OrcConstant" role="struct">
+<title>struct OrcConstant</title>
+<indexterm zone="OrcConstant"><primary>OrcConstant</primary></indexterm>
+<programlisting language="C">struct OrcConstant {
+};
+</programlisting>
+<para>The OrcConstant structure has no public members</para>
+</refsect2>
+<refsect2 id="ORC-ENABLE-ASM-CODE:CAPS" role="macro">
+<title>ORC_ENABLE_ASM_CODE</title>
+<indexterm zone="ORC-ENABLE-ASM-CODE:CAPS"><primary>ORC_ENABLE_ASM_CODE</primary></indexterm>
+<programlisting language="C">#define ORC_ENABLE_ASM_CODE
+</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

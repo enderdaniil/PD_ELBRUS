@@ -1,0 +1,239 @@
+25% symbol docs coverage.
+78 symbols documented.
+82 symbols incomplete.
+231 not documented.
+
+
+ARRAY_SIZE
+MAX
+MIN
+ORC_ASM_CODE (<parameters>)
+ORC_ASSERT (<parameters>)
+ORC_BEGIN_DECLS
+ORC_CLAMP
+ORC_COMPILER_ERROR (<parameters>)
+ORC_COMPILE_RESULT_IS_FATAL (<parameters>)
+ORC_COMPILE_RESULT_IS_SUCCESSFUL (<parameters>)
+ORC_DEBUG_PRINT (...)
+ORC_ENABLE_ASM_CODE
+ORC_END_DECLS
+ORC_EXPORT
+ORC_GNUC_PREREQ
+ORC_GNU_PRINTF
+ORC_GP_REG_BASE
+ORC_INTERNAL
+ORC_MMX_SHUF (<parameters>)
+ORC_N_CONSTANTS
+ORC_N_FIXUPS
+ORC_N_INSNS
+ORC_N_LABELS
+ORC_N_REGISTERS
+ORC_N_REGS
+ORC_N_RULE_SETS
+ORC_N_TARGETS
+ORC_N_VARIABLES
+ORC_OPCODE_N_ARGS
+ORC_PROGRAM_ERROR (<parameters>)
+ORC_PTR_TO_INT
+ORC_READ_UINT32_LE
+ORC_SSE_SHUF (<parameters>)
+ORC_STATIC_OPCODE_ACCUMULATOR
+ORC_STATIC_OPCODE_N_DEST
+ORC_STATIC_OPCODE_N_SRC
+ORC_STRUCT_OFFSET
+ORC_VEC_REG_BASE
+ORC_WRITE_UINT32_LE
+OrcArmCond (<items>)
+OrcArmDP (<items>)
+OrcArmRegister (<items>)
+OrcCompileResult (<items>)
+OrcExecutor
+OrcMMXRegister (<items>)
+OrcOpcodeEmulateFunc (<parameters>)
+OrcRuleEmitFunc (<parameters>)
+OrcSSERegister (<items>)
+OrcStaticOpcode (<items>)
+OrcTarget (<items>)
+OrcTargetMMXFlags (<items>)
+OrcTargetSSEFlags (<items>)
+OrcVarType (<items>)
+get_cpuinfo_line
+get_file
+get_file_int
+get_tag_value
+orc_arm_do_fixups
+orc_arm_emit
+orc_arm_emit_add
+orc_arm_emit_add_imm
+orc_arm_emit_branch
+orc_arm_emit_bx_lr
+orc_arm_emit_cmp_imm
+orc_arm_emit_dp_reg
+orc_arm_emit_label
+orc_arm_emit_load_reg
+orc_arm_emit_loadimm
+orc_arm_emit_mov
+orc_arm_emit_pop
+orc_arm_emit_push
+orc_arm_emit_sub
+orc_arm_emit_sub_imm
+orc_arm_init
+orc_arm_loadw
+orc_arm_reg_name
+orc_arm_storew
+orc_bool
+orc_c_init
+orc_compiler_allocate_codemem
+orc_compiler_get_dest
+orc_compiler_label_new
+orc_debug_print
+orc_executor_emulate
+orc_executor_free
+orc_executor_get_accumulator
+orc_executor_get_accumulator_str
+orc_executor_new
+orc_executor_run
+orc_executor_set_array
+orc_executor_set_array_str
+orc_executor_set_n
+orc_executor_set_param
+orc_executor_set_param_str
+orc_executor_set_program
+orc_mmx_emit_0f (<parameters>)
+orc_mmx_emit_660f (<parameters>)
+orc_mmx_emit_f20f (<parameters>)
+orc_mmx_emit_f30f (<parameters>)
+orc_mmx_emit_loadib (<parameters>)
+orc_mmx_emit_loadil (<parameters>)
+orc_mmx_emit_loadiw (<parameters>)
+orc_mmx_emit_loadpb (<parameters>)
+orc_mmx_emit_loadpl (<parameters>)
+orc_mmx_emit_loadpq (<parameters>)
+orc_mmx_emit_loadpw (<parameters>)
+orc_mmx_emit_pshufw (<parameters>)
+orc_mmx_emit_shiftimm (<parameters>)
+orc_mmx_get_cpu_flags
+orc_mmx_init
+orc_opcode_find_by_name
+orc_opcode_init
+orc_opcode_register_static
+orc_opcode_set_find_by_name
+orc_opcode_set_get
+orc_parse
+orc_powerpc_init
+orc_program_allocate_register
+orc_program_append
+orc_program_get_max_var_size
+orc_program_set_backup_name
+orc_rule_register
+orc_rule_set_new
+orc_sse_emit_0f
+orc_sse_emit_660f
+orc_sse_emit_f20f
+orc_sse_emit_f30f
+orc_sse_emit_loadib
+orc_sse_emit_loadil
+orc_sse_emit_loadiw
+orc_sse_emit_loadpb
+orc_sse_emit_loadpl
+orc_sse_emit_loadpq
+orc_sse_emit_loadpw
+orc_sse_emit_pshufd (<parameters>)
+orc_sse_emit_pshuflw (<parameters>)
+orc_sse_emit_shiftimm
+orc_sse_get_cpu_flags
+orc_sse_init
+orc_target_get_asm_preamble
+orc_target_get_by_name
+orc_target_get_default
+orc_target_get_default_flags
+orc_target_get_name
+orc_target_get_rule
+orc_target_register
+orc_x86_do_fixups
+orc_x86_emit_add_imm_memoffset (<parameters>)
+orc_x86_emit_add_imm_reg
+orc_x86_emit_add_reg_memoffset (<parameters>)
+orc_x86_emit_align (<parameters>)
+orc_x86_emit_and_imm_memoffset (<parameters>)
+orc_x86_emit_and_imm_reg (<parameters>)
+orc_x86_emit_cmp_imm_memoffset
+orc_x86_emit_cmp_reg_memoffset (<parameters>)
+orc_x86_emit_dec_memoffset
+orc_x86_emit_emms (<parameters>)
+orc_x86_emit_epilogue
+orc_x86_emit_je (<parameters>)
+orc_x86_emit_jle (<parameters>)
+orc_x86_emit_jmp (<parameters>)
+orc_x86_emit_jne (<parameters>)
+orc_x86_emit_label (<parameters>)
+orc_x86_emit_modrm_memoffset
+orc_x86_emit_modrm_reg
+orc_x86_emit_mov_imm_reg (<parameters>)
+orc_x86_emit_mov_memoffset_mmx (<parameters>)
+orc_x86_emit_mov_memoffset_reg
+orc_x86_emit_mov_memoffset_sse
+orc_x86_emit_mov_mmx_memoffset (<parameters>)
+orc_x86_emit_mov_mmx_reg (<parameters>)
+orc_x86_emit_mov_mmx_reg_reg (<parameters>)
+orc_x86_emit_mov_reg_memoffset
+orc_x86_emit_mov_reg_mmx (<parameters>)
+orc_x86_emit_mov_reg_reg (<parameters>)
+orc_x86_emit_mov_reg_sse
+orc_x86_emit_mov_sse_memoffset
+orc_x86_emit_mov_sse_reg
+orc_x86_emit_mov_sse_reg_reg
+orc_x86_emit_pop
+orc_x86_emit_prologue
+orc_x86_emit_push
+orc_x86_emit_ret (<parameters>)
+orc_x86_emit_rex
+orc_x86_emit_sar_imm_reg (<parameters>)
+orc_x86_emit_sub_memoffset_reg (<parameters>)
+orc_x86_emit_sub_reg_reg (<parameters>)
+orc_x86_emit_test_reg_reg (<parameters>)
+orc_x86_get_regname
+orc_x86_get_regname_16
+orc_x86_get_regname_64
+orc_x86_get_regname_mmx (<parameters>)
+orc_x86_get_regname_ptr
+orc_x86_get_regname_sse
+orc_x86_get_regnum
+powerpc_add_fixup (<parameters>)
+powerpc_do_fixups (<parameters>)
+powerpc_emit (<parameters>)
+powerpc_emit_655510 (<parameters>)
+powerpc_emit_VA (<parameters>)
+powerpc_emit_VX (<parameters>)
+powerpc_emit_VX_2 (<parameters>)
+powerpc_emit_X (<parameters>)
+powerpc_emit_addi (<parameters>)
+powerpc_emit_b (<parameters>)
+powerpc_emit_beq (<parameters>)
+powerpc_emit_bne (<parameters>)
+powerpc_emit_label (<parameters>)
+powerpc_emit_lwz (<parameters>)
+powerpc_emit_ret (<parameters>)
+powerpc_emit_srawi (<parameters>)
+powerpc_emit_stwu (<parameters>)
+powerpc_flush
+powerpc_get_constant (<parameters>)
+powerpc_get_regname (<parameters>)
+powerpc_regnum (<parameters>)
+strsplit
+
+misc:long_description
+misc:short_description
+orc:long_description
+orcarm:long_description
+orcdebug:long_description
+orcexecutor:long_description
+orcmmx:long_description
+orcopcode:long_description
+orcparse:long_description
+orcpowerpc:long_description
+orcprogram:long_description
+orcrule:long_description
+orcsse:long_description
+orcutils:long_description
+orcx86:long_description
